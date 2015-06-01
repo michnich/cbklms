@@ -1,0 +1,25 @@
+<template name="header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div calss="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>          
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">Coded by Kids LMS</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}">Submit Student</a></li>{{/if}}
+          {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}">Student List</a></li>{{/if}}
+          {{> loginButtons}}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>

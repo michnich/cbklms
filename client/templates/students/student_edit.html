@@ -1,0 +1,75 @@
+<template name="studentEdit">
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="first_name">First Name</label>
+      <div>
+        <input name="first_name" id="first_name" type="text" value="{{first_name}}" placeholder="Student First Name" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="last_name">Last Name</label>
+      <div>
+        <input name="last_name" id="last_name" type="text" value="{{last_name}}" placeholder="Student Last Name" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="level">Level</label>
+      <div>
+        <input name="level" id="level" type="number" min="0" max="4" value="{{level}}" placeholder="Student Level" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="type">Type</label>
+      <div>
+        <select name="type" id="type">
+          <option value="Child Scholarship">Child Scholarship</option>
+          <option value="Adult Scholarship">Adult Scholarship</option>
+          <option value="Child Paid">Child Paid</option>
+          <option value="Adult Paid">Adult Paid</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="program">Program</label>
+      <div>
+        <select name="program" id="program">
+          <option value="Foundation">Foundation</option>
+          <option value="School">School</option>
+          <option value="Summer Camp">Summer Camp</option>
+          <option value="Apprenticeship">Apprenticeship</option>
+          <option value="Dev Training">Dev Training</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="dob">Date of Birth</label>
+      <div>
+        <input name="dob" id="dob" type="date" value="{{dob}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="elm_school">Elementary School</label>
+      <div>
+        <input name="elm_school" id="elm_school" type="text" value="{{elm_school}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="high_school">High School</label>
+      <div>
+        <input name="high_school" id="high_school" type="text" value="{{high_school}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="reg_packet">Registration Packet Received</label>
+      <div>
+        <select name="reg_packet" id="reg">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete Student</a>    
+  </form>
+</template>
