@@ -1,5 +1,10 @@
 <template name="studentPage">
   <div class="student-page page">
     {{> studentDetails}}
+    <ul class="projects">
+    	{{#each projects}}
+    		{{> projectItem}}
+    	{{/each}}
+    </ul>
   </div>
 </template>

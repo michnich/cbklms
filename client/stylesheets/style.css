@@ -1,4 +1,4 @@
-.grid-block, .main, .student, .comments li, .comment-form {
+.grid-block, .main, .student, .projects li, .project-form {
   background: #fff;
   border-radius: 3px;
   padding: 10px;
@@ -77,18 +77,18 @@ body {
     float: right;
     margin-top: 7px; }
 
-.comments {
+.projects {
   list-style-type: none;
   margin: 0; }
-  .comments li h4 {
+  .projects li h4 {
     font-size: 16px;
     margin: 0; }
-    .comments li h4 .date {
+    .projects li h4 .date {
       font-size: 12px;
       font-weight: normal; }
-    .comments li h4 a {
+    .projects li h4 a {
       font-size: 12px; }
-  .comments li p:last-child {
+  .projects li p:last-child {
     margin-bottom: 0; }
 
 .dropdown-menu span {
