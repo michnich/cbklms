@@ -2,9 +2,10 @@
   <div class="student-page page">
     {{> studentDetails}}
     <ul class="projects">
-    	{{#each projects}}
-    		{{> projectItem}}
-    	{{/each}}
+      {{#each projects}}
+        {{> projectItem}}
+      {{/each}}
     </ul>
+      {{> projectSubmit}}
   </div>
 </template>

@@ -1,10 +1,6 @@
 <template name="projectItem">
-	<li>
-		<h3>
-			<a href="{{pathFor 'projectPage'}}"><span class="project-name">{{name}}</span></a>
-		</h3>
-		<p>
-			{{body}}
-		</p>
-	</li>
+  <li>
+    <h3><a href="{{pathFor 'projectPage'}}">{{project_name}}</a></h3>
+    <p>{{description}}</p>
+  </li>
 </template>
