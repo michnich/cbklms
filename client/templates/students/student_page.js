@@ -1,5 +1,5 @@
 Template.studentPage.helpers({
-	projects: function() {
-		return Projects.find({studentId: this._id});
-	}
+  projects: function() {
+    return Projects.find({studentId: this._id});
+  }
 });

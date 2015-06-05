@@ -1,13 +1,20 @@
 if (Students.find().count() === 0) {
   var now = new Date().getTime();
 
+  var tomId = Meteor.users.insert({
+    profile: { name: 'Tom Coleman' }
+  });
+  var tom = Meteor.users.findOne(tomId);
+
   var sianiId = Students.insert({
     first_name: 'Siani',
     last_name: 'Mobley',
     level: 0,
     dob: '9/11/2005',
     reg_packet: 'Yes',
-    registered: new Date(now - 7 * 3600 * 1000)    
+    registered: new Date(now - 7 * 3600 * 1000),    
+    submitted: new Date(now - 7 * 3600 * 1000),
+    projectsCount: 2  
   });
 
   Projects.insert({
@@ -24,7 +31,9 @@ if (Students.find().count() === 0) {
     last_name: 'Tilghman',
     level: 1,
     dob: '7/13/1984',
-    reg_packet: 'No'
+    reg_packet: 'No',
+    registered: new Date(now - 7 * 3600 * 1000),
+    submitted: new Date(now - 10 * 3600 * 1000),
   });
 
   var jasonId = Students.insert({
@@ -33,7 +42,8 @@ if (Students.find().count() === 0) {
     level: 3,
     dob: '12/25/1984',
     reg_packet: 'No',
-    registered: new Date(now - 7 * 3600 * 1000)    
+    registered: new Date(now - 7 * 3600 * 1000), 
+    submitted: new Date(now - 12 * 3600 * 1000),   
   });
 
   Projects.insert({
