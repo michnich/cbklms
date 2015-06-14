@@ -7,3 +7,6 @@ Meteor.publish('projects', function(studentId) {
   return Projects.find({studentId: studentId});
 });
 
+Meteor.publish('inforequests', function() {
+  return Inforequests.find();
+});

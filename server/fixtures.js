@@ -55,3 +55,19 @@ if (Students.find().count() === 0) {
     objective: 'To learn how to add links'
   });
 }
+
+if (Inforequests.find().count() === 0) {
+  Inforequests.insert({
+    name: 'John Doe',
+    email: 'jdoe@testemail.com',
+    subject: 'Other',
+    message: 'This is a test message'
+  });
+
+  Inforequests.insert({
+    name: 'Sean Strong',
+    email: 'ss@testemail.com',
+    subject: 'Other',
+    message: 'This is another test message'
+  });
+}
