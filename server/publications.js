@@ -9,9 +9,5 @@ Meteor.publish('projects', function(studentId) {
 
 Meteor.publish('inforequests', function() {
   return Inforequests.find();
-<<<<<<< HEAD
-});
-=======
 });
 
->>>>>>> students

@@ -54,23 +54,6 @@ if (Students.find().count() === 0) {
     lead: 'Sylvester Mobley',
     objective: 'To learn how to add links'
   });
-<<<<<<< HEAD
-}
-
-if (Inforequests.find().count() === 0) {
-  Inforequests.insert({
-    name: 'John Doe',
-    email: 'jdoe@testemail.com',
-    subject: 'Other',
-    message: 'This is a test message'
-  });
-
-  Inforequests.insert({
-    name: 'Sean Strong',
-    email: 'ss@testemail.com',
-    subject: 'Other',
-    message: 'This is another test message'
-=======
 
   Inforequests.insert({
     name: 'Jim Dough',
@@ -94,6 +77,5 @@ if (Inforequests.find().count() === 0) {
     phone: '215-555-3636',
     subject: 'some information',
     message: 'Can you answer a question'
->>>>>>> students
   });
 }
