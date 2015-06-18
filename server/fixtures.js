@@ -54,4 +54,28 @@ if (Students.find().count() === 0) {
     lead: 'Sylvester Mobley',
     objective: 'To learn how to add links'
   });
+
+  Inforequests.insert({
+    name: 'Jim Dough',
+    email: 'jdough@dough.com',
+    phone: '215-555-1212',
+    subject: 'need information',
+    message: 'I need some information about this class'
+  });
+
+  Inforequests.insert({
+    name: 'Steve Tinked',
+    email: 'st@st.com',
+    phone: '215-555-2424',
+    subject: 'looking for information',
+    message: 'I would linke some info about this class'
+  });
+
+  Inforequests.insert({
+    name: 'Kristen Sherman',
+    email: 'ksherman@sherman.com',
+    phone: '215-555-3636',
+    subject: 'some information',
+    message: 'Can you answer a question'
+  });
 }
