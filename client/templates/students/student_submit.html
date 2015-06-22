@@ -14,11 +14,83 @@
         <span class="help-block">{{errorMessage 'last_name'}}</span>
       </div>
     </div>
+    <div class="form-group {{errorClass 'email'}}">
+      <label class="control-label" for="email">Email</label>
+      <div>
+        <input name="email" id="email" type="text" value="" placeholder="Student Email" class="form-control"/>
+        <span class="help-block">{{errorMessage 'email'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'phone'}}">
+      <label class="control-label" for="phone">Phone</label>
+      <div>
+        <input name="phone" id="phone" type="text" value="" placeholder="Student Phone" class="form-control"/>
+        <span class="help-block">{{errorMessage 'phone'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'dob'}}">
+      <label class="control-label" for="dob">Date of Birth</label>
+      <div>
+        <input name="dob" id="dob" type="date" value="" class="form-control"/>
+        <span class="help-block">{{errorMessage 'dob'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'address1'}}">
+      <label class="control-label" for="address1">Address</label>
+      <div>
+        <input name="address1" id="address1" type="text" value="" placeholder="Student Address" class="form-control"/>
+        <span class="help-block">{{errorMessage 'address1'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'address2'}}">
+      <label class="control-label" for="address2"></label>
+      <div>
+        <input name="address2" id="address2" type="text" value="" placeholder="Student Address" class="form-control"/>
+        <span class="help-block">{{errorMessage 'address2'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'city'}}">
+      <label class="control-label" for="city">City</label>
+      <div>
+        <input name="city" id="city" type="text" value="" placeholder="Student City" class="form-control"/>
+        <span class="help-block">{{errorMessage 'city'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'state'}}">
+      <label class="control-label" for="state">State</label>
+      <div>
+        <input name="state" id="state" type="text" value="" placeholder="Student State" class="form-control"/>
+        <span class="help-block">{{errorMessage 'state'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'zip'}}">
+      <label class="control-label" for="zip">Zip</label>
+      <div>
+        <input name="zip" id="zip" type="zip" value="" placeholder="Student Zip" class="form-control"/>
+        <span class="help-block">{{errorMessage 'zip'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'country'}}">
+      <label class="control-label" for="country">Country</label>
+      <div>
+        <select name="country" id="country">
+          <option value="United States">United States</option>
+        </select>
+        <span class="help-block">{{errorMessage 'country'}}</span>
+      </div>
+    </div>
     <div class="form-group {{errorClass 'level'}}">
       <label class="control-label" for="level">Level</label>
       <div>
         <input name="level" id="level" type="number" min="0" max="4" value="" placeholder="Student Level" class="form-control"/>
         <span class="help-block">{{errorMessage 'level'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'github'}}">
+      <label class="control-label" for="github">GitHub Account Name</label>
+      <div>
+        <input name="github" id="github" type="github" value="" placeholder="Student GitHub Account" class="form-control"/>
+        <span class="help-block">{{errorMessage 'github'}}</span>
       </div>
     </div>
     <div class="form-group {{errorClass 'type'}}">
@@ -46,13 +118,6 @@
         <span class="help-block">{{errorMessage 'program'}}</span>
       </div>
     </div>
-    <div class="form-group {{errorClass 'dob'}}">
-      <label class="control-label" for="dob">Date of Birth</label>
-      <div>
-        <input name="dob" id="dob" type="date" value="" class="form-control"/>
-        <span class="help-block">{{errorMessage 'dob'}}</span>
-      </div>
-    </div>
     <div class="form-group {{errorClass 'elm_school'}}">
       <label class="control-label" for="elm_school">Elementary School</label>
       <div>
@@ -67,6 +132,41 @@
         <span class="help-block">{{errorMessage 'high_school'}}</span>
       </div>
     </div>
+    <div class="form-group {{errorClass 'parent_name'}}">
+      <label class="control-label" for="parent_name">Parent Name</label>
+      <div>
+        <input name="parent_name" id="parent_name" type="parent_name" value="" placeholder="Parent Name" class="form-control"/>
+        <span class="help-block">{{errorMessage 'parent_name'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'parent_phone'}}">
+      <label class="control-label" for="parent_phone">Parent Phone</label>
+      <div>
+        <input name="parent_phone" id="parent_phone" type="parent_phone" value="" placeholder="Parent Phone" class="form-control"/>
+        <span class="help-block">{{errorMessage 'parent_phone'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'parent_email'}}">
+      <label class="control-label" for="parent_email">Parent Email</label>
+      <div>
+        <input name="parent_email" id="parent_email" type="parent_email" value="" placeholder="Parent Email" class="form-control"/>
+        <span class="help-block">{{errorMessage 'parent_email'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'eme_contact'}}">
+      <label class="control-label" for="eme_contact">Emergency Contact</label>
+      <div>
+        <input name="eme_contact" id="eme_contact" type="eme_contact" value="" placeholder="Emergency Contact" class="form-control"/>
+        <span class="help-block">{{errorMessage 'eme_contact'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'eme_number'}}">
+      <label class="control-label" for="eme_number">Emergency Contact Number</label>
+      <div>
+        <input name="eme_number" id="eme_number" type="eme_number" value="" placeholder="Emergency Contact Number" class="form-control"/>
+        <span class="help-block">{{errorMessage 'eme_number'}}</span>
+      </div>
+    </div>
     <div class="form-group {{errorClass 'reg_packet'}}">
       <label class="control-label" for="reg_packet">Registration Packet Received</label>
       <div>
@@ -79,4 +179,5 @@
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
   </form>
+  <br>
 </template>
