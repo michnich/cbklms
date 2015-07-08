@@ -1,5 +1,5 @@
 <template name="header">
-  <nav class="navbar navbar-default" role="navigation">
+  {{#if currentUser}}<nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <div calss="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
@@ -15,12 +15,13 @@
           {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}">Submit Student</a></li>{{/if}}
           {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}">Student List</a></li>{{/if}}
           {{#if currentUser}}<li><a href="{{pathFor 'inforequestsList'}}">Info Request List</a></li>{{/if}}
-          {{> loginButtons}}
+          {{#if currentUser}}<li><a href="{{pathFor 'inforequestSubmit'}}">Submit Info Request</a></li>{{/if}}
+          {{#if currentUser}}<li><a href="#" class="logout">Logout</a></li>{{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           
         </ul>
       </div>
     </div>
-  </nav>
+  </nav>{{/if}}
 </template>
