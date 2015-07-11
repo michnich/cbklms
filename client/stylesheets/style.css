@@ -1,3 +1,4 @@
+/*Default*/
 .grid-block, .main, .student, .projects li, .project-form {
   background: #fff;
   border-radius: 3px;
@@ -157,4 +158,59 @@ body {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+/* ===================================================== */
+/* Top Menu
+/* ===================================================== */
+
+body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header .main_menu{
+  background-color: white;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: inline;
+  font-size: 14px;
+  float: right;
+  position: relative;
+  font-weight: 100;
+  padding: 18px 140px;
+  color: #fff;
+}
+
+.cbu{
+  display: inline;
+  padding: 0px 20px 0px 20px;
+}
+
+ul{
+  text-align: right;
+}
+
+a{
+  color: #444;
+  text-transform: uppercase;
+}
+
+.logo{
+  text-align: left;
+  position: relative;
+  float: left;
+}
+
+#name, #email, #subject{
+  width: 480px;
 }
