@@ -5,6 +5,7 @@ Template.studentEdit.events({
     var currentStudentId = this._id;
 
     var studentProperties = {
+      status: $(e.target).find('[name=status]').val(),
       first_name: $(e.target).find('[name=first_name]').val(),
       last_name: $(e.target).find('[name=last_name]').val(),
       level: $(e.target).find('[name=level]').val(),
