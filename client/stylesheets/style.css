@@ -214,3 +214,11 @@ a{
 #name, #email, #subject{
   width: 480px;
 }
+
+.form-control{
+  width: 480px;
+}
+
+#wdfapp{
+  padding: 0px 0px 0px 20px;
+}
