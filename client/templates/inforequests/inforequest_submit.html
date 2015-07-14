@@ -1,24 +1,50 @@
 <template name="inforequestSubmit">
-  <form class="main form page">
-    <div class="form-group">
+  <header class="header">
+    <div class="container">
+      <nav>
+        <ul class="main_menu">
+          <a href="index.html" class="logo"><img src="logo.png" alt="logo" width="140"></a>
+          <li class="cbu"> <a href="#about">About Us</a>  </li>
+          <li class="cbu"> <a href="#our-classes">Our Classes</a>  </li>
+          <li class="cbu"> <a href="#get-involved">Get Involved</a>  </li>
+          <li class="cbu"> <a href="#">Contact Us</a>  </li>
+          <li class="cbu"> <a href="#">Apply</a>  </li>
+        </ul>
+      </nav><!-- End Navigation -->
+    </div>
+  </header>
+  <div class="span">
+  </div>
+    <form>
+      <br>
+      <br>
+    <div class="col-sm-3">
+    </div>
+    <div class="form-group col-sm-8 col-centered">
       <label class="control-label" for="name">Name</label>
       <div class="controls">
           <input name="name" id="name" type="text" value="" placeholder="Your Name" class="form-control"/>
       </div>
+    </div>     
+    <div class="col-sm-3">
     </div>
-    <div class="form-group">
+    <div class="form-group col-sm-8 col-centered">
       <label class="control-label" for="email">Email</label>
       <div class="controls">
           <input name="email" id="email" type="email" value="" placeholder="Your Email Address" class="form-control"/>
       </div>
     </div>
-    <div class="form-group">
+    <div class="col-sm-3">
+    </div>
+    <div class="form-group col-sm-8 col-centered">
       <label class="control-label" for="subject">Subject</label>
       <div class="controls">
           <input name="subject" id="subject" type="text" value="" placeholder="Your Subject" class="form-control"/>
       </div>
     </div>
-    <div class="form-group">
+    <div class="col-sm-3">
+    </div>
+    <div class="form-group col-sm-8 col-centered">
       <label class="control-label" for="message">Message</label>
       <div class="controls">
         <textarea name="message" rows="10" cols="60">
@@ -26,6 +52,12 @@
         </textarea>
       </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <div class="col-sm-3">
+    </div>
+    <div class="form-group col-sm-5 col-centered">
+      <input type="submit" value="Submit" class="btn btn-primary"/>
+    </div>
+    <div class="col-sm-3">
+    </div>
   </form>
 </template>

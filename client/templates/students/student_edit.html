@@ -1,9 +1,20 @@
 <template name="studentEdit">
   <form class="main form page">
     <div class="form-group">
+      <label class="control-label" for="status">Status</label>
+      <div>
+        <select name="status" id="status">
+          <option value="Applicant">Applicant</option>
+          <option value="Active">Active</option>
+          <option value="Inavtice">Inactive</option>
+          <option selected="selected" value="{{status}}">{{status}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
       <label class="control-label" for="first_name">First Name</label>
       <div>
-        <input name="first_name" id="first_name" type="text" value="{{first_name}}" placeholder="Student First Name" class="form-control"/>
+        <input name="first_name" id="first_name" type="text" value="{{first_name}}" placeholder="{{first_name}}" class="form-control"/>
       </div>
     </div>
     <div class="form-group">
@@ -26,6 +37,7 @@
           <option value="Adult Scholarship">Adult Scholarship</option>
           <option value="Child Paid">Child Paid</option>
           <option value="Adult Paid">Adult Paid</option>
+          <option selected="selected" value="{{type}}">{{type}}</option>
         </select>
       </div>
     </div>
@@ -38,6 +50,7 @@
           <option value="Summer Camp">Summer Camp</option>
           <option value="Apprenticeship">Apprenticeship</option>
           <option value="Dev Training">Dev Training</option>
+          <option selected="selected" value="{{program}}">{{program}}</option>
         </select>
       </div>
     </div>
