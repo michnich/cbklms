@@ -3,6 +3,7 @@ Template.inforequestSubmit.events({
     e.preventDefault();
 
     var inforequest = {
+      status: $(e.target).find('[name=status]').val(),
       name: $(e.target).find('[name=name]').val(),
       email: $(e.target).find('[name=email]').val(),
       subject: $(e.target).find('[name=subject]').val(),

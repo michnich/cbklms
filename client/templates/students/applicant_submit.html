@@ -1,0 +1,283 @@
+<template name="applicantSubmit">
+  <header class="header">
+    <div class="container">
+      <nav>
+        <ul class="main_menu">
+          <a href="http://codedbyu.com/" class="logo"><img src="logo.png" alt="logo" width="140"></a>
+          <li class="cbu"> <a href="http://codedbyu.com/#about">About Us</a>  </li>
+          <li class="cbu"> <a href="http://codedbyu.com/#our-classes">Our Classes</a>  </li>
+          <li class="cbu"> <a href="http://codedbyu.com/#get-involved">Get Involved</a>  </li>
+          <li class="cbu"> <a href="{{pathFor 'inforequestSubmit'}}">Contact Us</a>  </li>
+          <li class="cbu"> <a href="#">Apply</a>  </li>
+        </ul>
+      </nav><!-- End Navigation -->
+    </div>
+  </header>
+  <div class="span">
+  </div>
+  <form id="wdfapp">
+    <br>
+    <h1>Web Development Fundamentals Application</h1>
+    <br>
+    <div class="form-group {{errorClass 'status'}}">
+      <label class="control-label" for="status"></label>
+      <div>
+        <input name="status" id="status" type="hidden" value="Applicant" placeholder="Applicant" class="form-control"/>
+        <span class="help-block">{{errorMessage 'status'}}</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="ta">Are You Willing To Volunteer As A Teaching Assistant In Our Kids Classes?</label>
+      <div>
+        <select name="ta" id="ta">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'first_name'}}">
+      <label class="control-label" for="first_name">First Name</label>
+      <div>
+        <input name="first_name" id="first_name" type="text" value="" placeholder="First Name" class="form-control"/>
+        <span class="help-block">{{errorMessage 'first_name'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'last_name'}}">
+      <label class="control-label" for="last_name">Last Name</label>
+      <div>
+        <input name="last_name" id="last_name" type="text" value="" placeholder="Last Name" class="form-control"/>
+        <span class="help-block">{{errorMessage 'last_name'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'email'}}">
+      <label class="control-label" for="email">Email</label>
+      <div>
+        <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control"/>
+        <span class="help-block">{{errorMessage 'email'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'phone'}}">
+      <label class="control-label" for="phone">Phone</label>
+      <div>
+        <input name="phone" id="phone" type="text" value="" placeholder="Phone" class="form-control"/>
+        <span class="help-block">{{errorMessage 'phone'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'dob'}}">
+      <label class="control-label" for="dob">Date of Birth</label>
+      <div>
+        <input name="dob" id="dob" type="date" value="" class="form-control"/>
+        <span class="help-block">{{errorMessage 'dob'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'address1'}}">
+      <label class="control-label" for="address1">Address</label>
+      <div>
+        <input name="address1" id="address1" type="text" value="" placeholder="Address" class="form-control"/>
+        <span class="help-block">{{errorMessage 'address1'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'address2'}}">
+      <label class="control-label" for="address2"></label>
+      <div>
+        <input name="address2" id="address2" type="text" value="" placeholder="Address" class="form-control"/>
+        <span class="help-block">{{errorMessage 'address2'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'city'}}">
+      <label class="control-label" for="city">City</label>
+      <div>
+        <input name="city" id="city" type="text" value="" placeholder="City" class="form-control"/>
+        <span class="help-block">{{errorMessage 'city'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'state'}}">
+      <label class="control-label" for="state">State</label>
+      <div>
+        <input name="state" id="state" type="text" value="" placeholder="State" class="form-control"/>
+        <span class="help-block">{{errorMessage 'state'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'zip'}}">
+      <label class="control-label" for="zip">Zip</label>
+      <div>
+        <input name="zip" id="zip" type="zip" value="" placeholder="Zip" class="form-control"/>
+        <span class="help-block">{{errorMessage 'zip'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'country'}}">
+      <label class="control-label" for="country">Country</label>
+      <div>
+        <select name="country" id="country">
+          <option value="United States">United States</option>
+        </select>
+        <span class="help-block">{{errorMessage 'country'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'program'}}">
+      <label class="control-label" for="program"></label>
+      <div>
+        <input name="program" id="program" type="hidden" value="Dev Training" placeholder="Dev Training" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'education'}}">
+      <label class="control-label" for="education">Highest Level of Education Attained</label>
+      <div>
+        <select name="education" id="education">
+          <option value="High School">High School</option>
+          <option value="Some College">Some College</option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="Doctorate Degree">Doctorate Degree</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'github'}}">
+      <label class="control-label" for="github">GitHub Account Name</label>
+      <div>
+        <input name="github" id="github" type="github" value="" placeholder="GitHub Account" class="form-control"/>
+        <span class="help-block">{{errorMessage 'github'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'high_school'}}">
+      <label class="control-label" for="high_school">High School</label>
+      <div>
+        <input name="high_school" id="high_school" type="text" value="" class="form-control" placeholder="High School"/>
+        <span class="help-block">{{errorMessage 'high_school'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'college'}}">
+      <label class="control-label" for="college">Last College Attended</label>
+      <div>
+        <input name="college" id="college" type="text" value="" class="form-control" placeholder="Last College Attended"/>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="form-group {{errorClass 'employer'}}">
+      <label class="control-label" for="employer">Current Employer</label>
+      <div>
+        <input name="employer" id="employer" type="text" value="" class="form-control" placeholder="Current Employer"/>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'position'}}">
+      <label class="control-label" for="position">Current Position</label>
+      <div>
+        <input name="position" id="position" type="text" value="" class="form-control" placeholder="Current Position"/>
+      </div>
+    </div>    
+    <br>
+    <br>
+    <div class="form-group">
+      <label class="control-label" for="sex">Gender</label>
+      <div>
+        <select name="sex" id="sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="ethnicity">Ethnicity</label>
+      <div>
+        <select name="ethnicity" id="ethnicity">
+          <option value="Hispanic">Hispanic or Latino</option>
+          <option value="Not hispanic">Not Hispanic or Latino</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="race">Race</label>
+      <div>
+        <select name="race" id="race">
+          <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+          <option value="Asian">Asian</option>
+          <option value="Black or African American">Black or African American</option>
+          <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+          <option value="White">White</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="income">Annual Income</label>
+      <div>
+        <select name="income" id="income">
+          <option value="$0 to $15,000">$0 to $15,000</option>
+          <option value="$16,000 to $35,000">$16,000 to $35,000</option>
+          <option value="$36,000 to $45,000">$36,000 to $45,000</option>
+          <option value="Greater than $45,000">Greater than $45,000</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label class="control-label" for="job_duties">Please Describe Your Current Job Duties In 200 Words Or Less</label>
+      <div class="controls">
+        <textarea name="job_duties" rows="10" cols="80">
+
+        </textarea>
+      </div>
+    </div>    
+    <br>
+    <br>
+    <div class="form-group">
+      <label class="control-label" for="volunteer">Please Describe Any Volunteer Work You've Done In The Past</label>
+      <div class="controls">
+        <textarea name="volunteer" rows="10" cols="80">
+
+        </textarea>
+      </div>
+    </div>    
+    <br>
+    <br>
+    <div class="form-group">
+      <label class="control-label" for="goal">Please Describe What You Hope To Get Out Of The Program</label>
+      <div class="controls">
+        <textarea name="goal" rows="10" cols="80">
+
+        </textarea>
+      </div>
+    </div>    
+    <br>
+    <br>
+    <div class="form-group">
+      <label class="control-label" for="community">How You Would Like To Contribute To The Coded by U and Coded by Kids Communities?</label>
+      <div class="controls">
+        <textarea name="community" rows="10" cols="80">
+
+        </textarea>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="form-group {{errorClass 'eme_contact'}}">
+      <label class="control-label" for="eme_contact">Emergency Contact</label>
+      <div>
+        <input name="eme_contact" id="eme_contact" type="eme_contact" value="" placeholder="Emergency Contact" class="form-control"/>
+        <span class="help-block">{{errorMessage 'eme_contact'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'eme_number'}}">
+      <label class="control-label" for="eme_number">Emergency Contact Number</label>
+      <div>
+        <input name="eme_number" id="eme_number" type="eme_number" value="" placeholder="Emergency Contact Number" class="form-control"/>
+        <span class="help-block">{{errorMessage 'eme_number'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'level'}}">
+      <label class="control-label" for="level"></label>
+      <div>
+        <input name="level" id="level" type="hidden" value="0" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'type'}}">
+      <label class="control-label" for="type"></label>
+      <div>
+        <input name="type" id="type" type="hidden" value="Adult Paid" placeholder="Adult Paid" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+  <br>
+</template>
