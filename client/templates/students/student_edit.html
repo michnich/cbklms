@@ -24,6 +24,18 @@
       </div>
     </div>
     <div class="form-group">
+      <label class="control-label" for="email">Email</label>
+      <div>
+        <input name="email" id="email" type="text" value="{{email}}" placeholder="Student Email" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="phone">Phone</label>
+      <div>
+        <input name="phone" id="phone" type="text" value="{{phone}}" placeholder="Student Phone" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
       <label class="control-label" for="level">Level</label>
       <div>
         <input name="level" id="level" type="number" min="0" max="4" value="{{level}}" placeholder="Student Level" class="form-control"/>
@@ -45,7 +57,7 @@
       <label class="control-label" for="program">Program</label>
       <div>
         <select name="program" id="program">
-          <option value="Foundation">Foundation</option>
+          <option value="Kids Weekly">Kids Weekly</option>
           <option value="School">School</option>
           <option value="Summer Camp">Summer Camp</option>
           <option value="Apprenticeship">Apprenticeship</option>
@@ -73,12 +85,43 @@
       </div>
     </div>
     <div class="form-group">
+      <label class="control-label" for="parent_phone">Parent Phone</label>
+      <div>
+        <input name="parent_phone" id="parent_phone" type="parent_phone" value="{{parent_phone}}" placeholder="Parent Phone" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="parent_email">Parent Email</label>
+      <div>
+        <input name="parent_email" id="parent_email" type="parent_email" value="{{parent_email}}" placeholder="Parent Email" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="eme_contact">Emergency Contact</label>
+      <div>
+        <input name="eme_contact" id="eme_contact" type="eme_contact" value="{{eme_contact}}" placeholder="Emergency Contact" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="eme_number">Emergency Contact Number</label>
+      <div>
+        <input name="eme_number" id="eme_number" type="eme_number" value="{{eme_number}}" placeholder="Emergency Contact Number" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
       <label class="control-label" for="reg_packet">Registration Packet Received</label>
       <div>
         <select name="reg_packet" id="reg">
           <option value="Yes">Yes</option>
           <option value="No">No</option>
+          <option selected="selected" value="{{reg_packet}}">{{reg_packet}}</option>
         </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="last_aud">Last Audit</label>
+      <div>
+        <input name="last_aud" id="last_aud" type="date" value="{{last_aud}}" class="form-control"/>
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
