@@ -1,5 +1,4 @@
-<template name="studentList">
-
+<template name="management">
 <div class="container-fluid">
     <div id="management" class="row">
         <div class="col-sm-3">
@@ -9,7 +8,7 @@
             <ul class="nav nav-stacked">
                 <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">Students <i class="glyphicon glyphicon-chevron-down"></i></a>
                     <ul class="nav nav-stacked collapse in" id="userMenu">
-                        <li class="active"> <a href="{{pathFor 'home'}}"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                        <li class="active"> <a href="{{pathFor 'management'}}"><i class="glyphicon glyphicon-home"></i> Home</a></li>
                         <li><a href="{{pathFor 'inforequestsList'}}"><i class="glyphicon glyphicon-comment"></i> Info Requests</a></li>
                         {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}"><i class="glyphicon glyphicon-user"></i> Student List</a></li>{{/if}}
                         {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}"><i class="glyphicon glyphicon-user"></i> Submit Student</a></li>{{/if}}
@@ -31,25 +30,52 @@
             <hr>
         </div>
         <!-- /col-3 -->
+        <div class="col-sm-9">
+
             <!-- column 2 -->
+
             <div class="row">
                 <!-- center left-->
-                <div class="col-md-8">
-                  <div class="students">
-                    {{#each students}}
-                      {{> studentItem}}
-                    {{/each}}
-                  </div>
+                <div class="col-md-6">
+                    <div class="well"></div>
+
+                    <hr>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4></h4></div>
+                        <div class="panel-body">
+                            <small></small>
+                        </div>
+                        <!--/panel-body-->
+                    </div>
+                    <!--/panel-->
+
+                    <hr>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4></h4>
+                        </div>
+                    </div>
                 </div>
                 <!--/col-->
-                <div class="col-md-4">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4></h4>
+                        </div>
+                        <div class="panel-body">
+                        </div>
+                    </div>
+                    <!--/panel-->
+
                 </div>
                 <!--/col-span-6-->
 
             </div>
             <!--/row-->
-
+        </div>
         <!--/col-span-9-->
     </div>
-</div> 
+</div>
 </template>
