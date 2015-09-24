@@ -5,6 +5,6 @@ Template.login.events({
         var passwordVar = event.target.loginPassword.value;
         Meteor.loginWithPassword(emailVar, passwordVar);
         console.log("Form submitted.");
-        Router.go('home'); 
+        Router.go('management'); 
     }
 });
