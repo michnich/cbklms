@@ -1,37 +1,4 @@
 <template name="studentList">
-
-<div class="container-fluid">
-    <div id="management" class="row">
-        <div class="col-sm-3">
-            <!-- Left column -->
-            <a href="#"><strong><i class="glyphicon glyphicon-wrench"></i>Class Management</strong></a>
-            <hr>
-            <ul class="nav nav-stacked">
-                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">Students <i class="glyphicon glyphicon-chevron-down"></i></a>
-                    <ul class="nav nav-stacked collapse in" id="userMenu">
-                        <li class="active"> <a href="{{pathFor 'home'}}"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-                        <li><a href="{{pathFor 'inforequestsList'}}"><i class="glyphicon glyphicon-comment"></i> Info Requests</a></li>
-                        {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}"><i class="glyphicon glyphicon-user"></i> Student List</a></li>{{/if}}
-                        {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}"><i class="glyphicon glyphicon-user"></i> Submit Student</a></li>{{/if}}
-                    </ul>
-                </li>
-                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2"> Reports <i class="glyphicon glyphicon-chevron-right"></i></a>
-
-                    <ul class="nav nav-stacked collapse" id="menu2">
-                        <li><a href="#">Class Stats</a>
-                        </li>
-                        <li><a href="#">Student Stats</a>
-                        </li>
-                        <li><a href="#">Instructor Stats</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-            <hr>
-        </div>
-        <!-- /col-3 -->
-            <!-- column 2 -->
             <div class="row">
                 <!-- center left-->
                 <div class="col-md-8">
@@ -47,9 +14,5 @@
                 <!--/col-span-6-->
 
             </div>
-            <!--/row-->
-
-        <!--/col-span-9-->
-    </div>
-</div> 
+            <!--/row--> 
 </template>
