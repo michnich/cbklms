@@ -1,0 +1,42 @@
+<template name="side">
+{{#if currentUser}}<div class="container-fluid">
+            <!-- Left column -->
+            <strong>Class Management</strong>
+            <hr>
+            <ul class="nav nav-stacked">
+                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu"><i class="glyphicon glyphicon-user"></i> Students <i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <ul class="nav nav-stacked collapse in" id="userMenu">
+                        <li><a href="{{pathFor 'inforequestsList'}}"> Info Requests</a></li>
+                        {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}"> Student List</a></li>{{/if}}
+                        {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}"> Submit Student</a></li>{{/if}}
+                    </ul>
+                </li>
+                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2"><i class="glyphicon glyphicon-education"></i> Instructors <i class="glyphicon glyphicon-chevron-down"></i></a>
+
+                    <ul class="nav nav-stacked collapse" id="menu2">
+                        <li><a href="#"> Instructor List</a>
+                        </li>
+                        <li><a href="#"> Submit Instructor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu3"><i class="glyphicon glyphicon-stats"></i> Reports <i class="glyphicon glyphicon-chevron-down"></i></a>
+
+                    <ul class="nav nav-stacked collapse" id="menu3">
+                        <li><a href="#">Class Stats</a>
+                        </li>
+                        <li><a href="#">Student Stats</a>
+                        </li>
+                        <li><a href="#">Instructor Stats</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <hr>
+        <!-- /col-3 -->
+
+        <!--/col-span-9-->
+</div>{{/if}}
+</template>

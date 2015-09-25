@@ -231,8 +231,12 @@ a{
   width: 480px;
 }
 
-#wdfapp{
+.general-form{
   padding: 0px 0px 0px 20px;
+}
+
+.project-list{
+  text-align: left;
 }
 
 #confirmation{
