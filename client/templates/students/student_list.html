@@ -1,7 +1,18 @@
 <template name="studentList">
-  <div class="students">
-    {{#each students}}
-      {{> studentItem}}
-    {{/each}}
-  </div> 
+            <div class="row">
+                <!-- center left-->
+                <div class="col-md-8">
+                  <div class="students">
+                    {{#each students}}
+                      {{> studentItem}}
+                    {{/each}}
+                  </div>
+                </div>
+                <!--/col-->
+                <div class="col-md-4">
+                </div>
+                <!--/col-span-6-->
+
+            </div>
+            <!--/row--> 
 </template>

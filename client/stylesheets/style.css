@@ -15,6 +15,16 @@ body {
 #main {
   position: relative;
 }
+#management{
+  padding-top: 20px;
+}
+#student-list{
+  padding: 10px 0 0 25px;
+}
+.nav-stacked{
+  width: 200px;
+  text-align: left;
+}
 .page {
   position: absolute;
   top: 0px;
@@ -35,7 +45,9 @@ body {
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
-  opacity: 1; }
+  opacity: 1;
+  width: 65%; 
+}
   .student:before, .student:after {
     content: "";
     display: table; }
@@ -219,8 +231,12 @@ a{
   width: 480px;
 }
 
-#wdfapp{
+.general-form{
   padding: 0px 0px 0px 20px;
+}
+
+.project-list{
+  text-align: left;
 }
 
 #confirmation{

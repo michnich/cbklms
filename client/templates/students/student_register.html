@@ -1,5 +1,38 @@
-<template name="studentSubmit">
+<template name="studentRegister">
+  <!--<header class="header">
+    <div class="container">
+      <nav>
+        <ul class="main_menu">
+          <a href="http://codedbyu.com/" class="logo"><img src="logo.png" alt="logo" width="140"></a>
+          <li class="cbu"> <a href="http://codedbyu.com/#about">About Us</a>  </li>
+          <li class="cbu"> <a href="http://codedbyu.com/#our-classes">Our Classes</a>  </li>
+          <li class="cbu"> <a href="http://codedbyu.com/#get-involved">Get Involved</a>  </li>
+          <li class="cbu"> <a href="{{pathFor 'inforequestSubmit'}}">Contact Us</a>  </li>
+          <li class="cbu"> <a href="#">Apply</a>  </li>
+        </ul>
+      </nav>
+    </div>
+  </header>-->
+  <!--<div class="span">
+  </div>-->
   <form class="general-form">
+    <!--<br>
+    <h1>Web Development Fundamentals Application</h1>
+    <br>-->
+    <div class="form-group {{errorClass 'status'}}">
+      <label class="control-label" for="status"></label>
+      <div>
+        <input name="status" id="status" type="hidden" value="Applicant" placeholder="Applicant" class="form-control"/>
+        <span class="help-block">{{errorMessage 'status'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'program'}}">
+      <label class="control-label" for="program"></label>
+      <div>
+        <input name="program" id="program" type="hidden" value="Kids Weekly" placeholder="Kids Weekly" class="form-control"/>
+        <span class="help-block">{{errorMessage 'program'}}</span>
+      </div>
+    </div>
     <div class="form-group {{errorClass 'first_name'}}">
       <label class="control-label" for="first_name">First Name</label>
       <div>
@@ -79,43 +112,10 @@
         <span class="help-block">{{errorMessage 'country'}}</span>
       </div>
     </div>
-    <div class="form-group {{errorClass 'level'}}">
-      <label class="control-label" for="level">Level</label>
-      <div>
-        <input name="level" id="level" type="number" min="0" max="4" value="" placeholder="Student Level" class="form-control"/>
-        <span class="help-block">{{errorMessage 'level'}}</span>
-      </div>
-    </div>
-    <div class="form-group {{errorClass 'github'}}">
-      <label class="control-label" for="github">GitHub Account Name</label>
-      <div>
-        <input name="github" id="github" type="github" value="" placeholder="Student GitHub Account" class="form-control"/>
-        <span class="help-block">{{errorMessage 'github'}}</span>
-      </div>
-    </div>
     <div class="form-group {{errorClass 'type'}}">
-      <label class="control-label" for="type">Type</label>
+      <label class="control-label" for="type"></label>
       <div>
-        <select name="type" id="type">
-          <option value="Child Scholarship">Child Scholarship</option>
-          <option value="Adult Scholarship">Adult Scholarship</option>
-          <option value="Child Paid">Child Paid</option>
-          <option value="Adult Paid">Adult Paid</option>
-        </select>
-        <span class="help-block">{{errorMessage 'type'}}</span>
-      </div>
-    </div>
-    <div class="form-group {{errorClass 'program'}}">
-      <label class="control-label" for="program">Program</label>
-      <div>
-        <select name="program" id="program">
-          <option value="Kids Weekly">Kids Weekly</option>
-          <option value="School">School</option>
-          <option value="Summer Camp">Summer Camp</option>
-          <option value="Apprenticeship">Apprenticeship</option>
-          <option value="Dev Training">Dev Training</option>
-        </select>
-        <span class="help-block">{{errorMessage 'program'}}</span>
+        <input name="type" id="type" type="hidden" value="Child Scholarship" placeholder="Child Scholarship" class="form-control"/>
       </div>
     </div>
     <div class="form-group {{errorClass 'elm_school'}}">
@@ -128,10 +128,60 @@
     <div class="form-group {{errorClass 'high_school'}}">
       <label class="control-label" for="high_school">High School</label>
       <div>
-        <input name="high_school" id="high_school" type="text" value="" class="form-control" placeholder="Student High School"/>
+        <input name="high_school" id="high_school" type="text" value="" class="form-control" placeholder="High School"/>
         <span class="help-block">{{errorMessage 'high_school'}}</span>
       </div>
     </div>
+    <div class="form-group {{errorClass 'grade'}}">
+      <label class="control-label" for="grade">grade</label>
+      <div>
+        <input name="grade" id="grade" type="number" min="1" max="12" value="" placeholder="Student Grade" class="form-control"/>
+        <span class="help-block">{{errorMessage 'grade'}}</span>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="control-label" for="sex">Student Gender</label>
+      <div>
+        <select name="sex" id="sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="ethnicity">Student Ethnicity</label>
+      <div>
+        <select name="ethnicity" id="ethnicity">
+          <option value="Hispanic">Hispanic or Latino</option>
+          <option value="Not hispanic">Not Hispanic or Latino</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="race">Student Race</label>
+      <div>
+        <select name="race" id="race">
+          <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+          <option value="Asian">Asian</option>
+          <option value="Black or African American">Black or African American</option>
+          <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+          <option value="White">White</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="income">Student Family Annual Household Income</label>
+      <div>
+        <select name="income" id="income">
+          <option value="$0 to $15,000">$0 to $15,000</option>
+          <option value="$16,000 to $35,000">$16,000 to $35,000</option>
+          <option value="$36,000 to $45,000">$36,000 to $45,000</option>
+          <option value="Greater than $45,000">Greater than $45,000</option>
+        </select>
+      </div>
+    </div>
+    <br>
     <div class="form-group {{errorClass 'parent_name'}}">
       <label class="control-label" for="parent_name">Parent Name</label>
       <div>
@@ -153,6 +203,7 @@
         <span class="help-block">{{errorMessage 'parent_email'}}</span>
       </div>
     </div>
+    <br>
     <div class="form-group {{errorClass 'eme_contact'}}">
       <label class="control-label" for="eme_contact">Emergency Contact</label>
       <div>
@@ -167,14 +218,11 @@
         <span class="help-block">{{errorMessage 'eme_number'}}</span>
       </div>
     </div>
-    <div class="form-group {{errorClass 'reg_packet'}}">
-      <label class="control-label" for="reg_packet">Registration Packet Received</label>
+    <div class="form-group {{errorClass 'level'}}">
+      <label class="control-label" for="level"></label>
       <div>
-        <select name="reg_packet" id="reg">
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-        <span class="help-block">{{errorMessage 'reg_packet'}}</span>
+        <input name="level" id="level" type="hidden" value="1" placeholder="" class="form-control"/>
+        <span class="help-block">{{errorMessage 'level'}}</span>
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>

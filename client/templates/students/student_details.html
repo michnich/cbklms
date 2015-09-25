@@ -1,77 +1,155 @@
 <template name="studentDetails">
-  <div class="student">
-    <div class="student-content">
-      <h4>{{status}}</h4>
-      <h4>Willing to TA in class: {{ta}}</h4>
-      <h2>{{first_name}} {{last_name}}</h2>
-      <h4>{{email}}</h4>
-      <h4>{{phone}}</h4>
-      <br>
-      <h4>Date of Birth: {{dob}}</h4>
-      <br>
-      <h3>Address:</h3>
-      <h4>{{address1}}</h4>
-      <h4>{{address2}}</h4>
-      <h4>{{city}}</h4>
-      <h4>{{state}}</h4>
-      <h4>{{zip}}</h4>
-      <h4>{{country}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Student Level: {{level}}</h4>
-      <h4>Education: {{education}}</h4>
-      <h4>Student Program: {{program}}</h4> 
-      <h4>Student Type: {{type}}</h4> 
-      <h4>Student GitHub Username: {{github}}</h4>     
-      <br>
-      <hr>
-      <br>
-      <h4>Parent/Guardian: {{parent_name}}</h4>
-      <h4>Parent/Guardian Phone Number: {{parent_phone}}</h4>
-      <h4>Parent/Guardian Email: {{parent_email}}</h4>
-      <br>
-      <h4>Emergency Contact: {{eme_contact}}</h4>
-      <h4>Emergency Contact Phone Number: {{eme_number}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Elementary School: {{elm_school}}</h4>
-      <h4>High School: {{high_school}}</h4>
-      <h4>College: {{college}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Employer: {{employer}}</h4>
-      <h4>Position: {{position}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Sex: {{sex}}</h4>
-      <h4>Ethnicity: {{ethnicity}}</h4>
-      <h4>Race: {{race}}</h4>
-      <h4>Income: {{income}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Job Duties: {{job_duties}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Volunteer Work: {{volunteer}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Program goal: {{goal}}</h4>
-      <br>
-      <hr>
-      <br>
-      <h4>Community Contribution: {{community}}</h4>
-      <br>
-      <hr>
-      <br> 
-      <h4>Registration Packet Received: {{reg_packet}}</h4>
-      <br>
+  <div class="col-md-4">
+    <hr>
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <h4>{{first_name}} {{last_name}}</h4>
+          <h5>{{email}}</h5>
+          <h5>{{phone}}</h5>
+          <h5>Date of Birth: {{dob}}</h5>
+          <h5>GitHub Username: {{github}}</h5>
+      </div>
+      <!--/panel-body-->
     </div>
+    <!--/panel-->
+    <hr>
+
+  </div>
+  <div class="col-md-6">
+    <hr>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Program Info</h4>
+      </div>
+      <div class="panel-body">
+          <h5>Student Status: {{status}}</h5>
+          <h5>Student Program: {{program}}</h5>
+          <h5>Student Type: {{type}}</h5>
+          <h5>Student Level: {{level}}</h5>
+          <h5>Last Student Audit: {{last_aud}}</h5>
+          <h5>Registration Packet Received: {{reg_packet}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
+
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Student Address</h4>
+      </div>
+      <div class="panel-body">
+          <h5>{{address1}}</h5>
+          <h5>{{address2}}</h5>
+          <h5>{{city}}</h5>
+          <h5>{{state}}</h5>
+          <h5>{{zip}}</h5>
+          <h5>{{country}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Education Info</h4>
+      </div>
+      <div class="panel-body">
+        <h5>Elementary School: {{elm_school}}</h5>
+        <h5>High School: {{high_school}}</h5>
+        <h5>Grade: {{grade}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Parent Info</h4>
+      </div>
+      <div class="panel-body">
+        <h5>Parent/Guardian: {{parent_name}}</h5>
+        <h5>Parent/Guardian Phone Number: {{parent_phone}}</h5>
+        <h5>Parent/Guardian Email: {{parent_email}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Emergency Contact Info</h4>
+      </div>
+      <div class="panel-body">
+        <h5>Emergency Contact: {{eme_contact}}</h5>
+        <h5>Emergency Contact Phone Number: {{eme_number}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Student Demographic Info</h4>
+      </div>
+      <div class="panel-body">
+        <h5>Sex: {{sex}}</h5>
+        <h5>Ethnicity: {{ethnicity}}</h5>
+        <h5>Race: {{race}}</h5>
+        <h5>Income: {{income}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Adult Student Info</h4>
+      </div>
+      <div class="panel-body">
+        <h5>Willing to TA in class: {{ta}}</h5>
+        <h5>Education: {{education}}</h5>
+        <h5>College: {{college}}</h5>
+        <h5>Employer: {{employer}}</h5>
+        <h5>Position: {{position}}</h5>
+        <h5>Job Duties: {{job_duties}}</h5>
+        <h5>Volunteer Work: {{volunteer}}</h5>
+        <h5>Program goal: {{goal}}</h5>
+        <h5>Community Contribution: {{community}}</h5>
+      </div>
+      <!--/panel-body-->
+    </div>
+    <!--/panel-->
+    <hr>
   </div>
 </template>
