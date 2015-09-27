@@ -1,5 +1,7 @@
 Template.projectItem.helpers({
-  submittedText: function() {
-    return this.submitted.toString();
+  domain: function() {
+    var a = document.createElement('a');
+    a.href = this.url;
+    return a.hostname;
   }
 });

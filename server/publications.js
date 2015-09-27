@@ -3,8 +3,7 @@ Meteor.publish('students', function() {
 });
 
 Meteor.publish('projects', function(studentId) {
-  check(studentId, String);
-  return Projects.find({studentId: studentId});
+  return Projects.find();
 });
 
 Meteor.publish('inforequests', function() {
