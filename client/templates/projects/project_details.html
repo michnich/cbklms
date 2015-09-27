@@ -2,7 +2,13 @@
   <div class="col-md-10">
     <div class="panel panel-default">
       <div class="panel-body">
+          <p><a href="{{pathFor 'projectEdit'}}">Edit</a></p>
           <h4>{{project_name}}</h4>
+          <h5><strong>Project Lead: </strong>{{project_lead}}</h5>
+          <h5><strong>Project Start Date: </strong>{{project_start}}</h5>
+          <h5><strong>Estimated Project End Date: </strong>{{project_end_est}}</h5>
+          <h5><strong>Actual Project End Date: </strong>{{project_end_act}}</h5>
+          <strong>Project Description:</strong>
           <h5>{{description}}</h5>
       </div>
     <!--/panel-body-->

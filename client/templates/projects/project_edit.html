@@ -1,0 +1,46 @@
+<template name="projectEdit">
+  <div class="col-md-10">
+  <form name="project" class="project-form form">
+    <div class="form-group">
+        <div class="controls">
+            <label for="project_name">Project Name</label>
+            <input name="project_name" id="project_name" type="text" value="{{project_name}}" placeholder="Project Name" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="controls">
+            <label for="project_lead">Project Lead</label>
+            <input name="project_lead" id="project_lead" type="text" value="{{project_lead}}" placeholder="Project Lead" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="project_start">Project Start Date</label>
+      <div>
+        <input name="project_start" id="project_start" type="date" value="{{project_start}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="project_end_est">Estimated Project End Date</label>
+      <div>
+        <input name="project_end_est" id="project_end_est" type="date" value="{{project_end_est}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="project_end_act">Actual Project End Date</label>
+      <div>
+        <input name="project_end_act" id="project_end_act" type="date" value="{{project_end_act}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="description">Project Description</label>
+      <div>
+        <textarea name="description" id="description" placeholder="Project Description" value="{{description}}" class="form-control" rows="6"></textarea>
+      </div>
+    </div>    
+    <input type="submit" value="Update" class="btn btn-primary submit"/>
+    <hr>
+    <a class="btn btn-danger delete" href="#">Delete</a>
+  </form>
+  <br>
+  </div>
+</template>
