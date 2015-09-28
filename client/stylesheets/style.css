@@ -239,6 +239,19 @@ a{
   text-align: left;
 }
 
+.dash-num{
+  font-size: 50px;
+  padding-left: 10px;
+}
+
+.dashboard{
+  width: 330px;
+}
+
+.dashboard h2{
+  color: #FF847E;
+}
+
 #confirmation{
   padding: 0px 0px 0px 20px;
 }
