@@ -1,37 +1,47 @@
 <template name="management">
-            <!-- column 2 -->
-                <!-- center left-->
-                <div class="col-md-6">
-                    <div class="well"></div>
-                    <hr>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4></h4></div>
-                        <div class="panel-body">
-                            <small></small>
-                        </div>
-                        <!--/panel-body-->
-                    </div>
-                    <!--/panel-->
-                    <hr>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4></h4>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!--/col-->
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4></h4>
-                        </div>
-                        <div class="panel-body">
-                        </div>
-                    </div>
-                    <!--/panel-->
-                </div>
-                <!--/col-span-6-->
-            <!--/row-->
+<!-- column 2 -->
+    <!-- center left-->
+    <div class="col-md-4">
+        <div class="well dashboard">
+            <h2 class="dash-num">{{studentsCountAct}}</h2>
+            <h4>Total Active Students</h4>
+        </div>
+        <hr>
+        <div class="well dashboard">
+            <h2 class="dash-num">{{studentsCountAllApplicant}}</h2>
+            <h4>Total Program Applicants</h4>
+        </div>
+        <hr>
+        <div class="well dashboard">
+            <h2 class="dash-num">{{infoRequestCountNew}}</h2>
+            <h4>Total New Info Requests</h4>
+        </div>
+    </div>
+    <!--/col-->
+    <div class="col-md-4">
+        <div class="well dashboard">
+            <h2 class="dash-num">{{studentsCountChildAct}}</h2>
+            <h4>Total Active Weekly Youth Students</h4>
+        </div>
+        <hr>
+        <div class="well dashboard">
+            <h2 class="dash-num">{{studentsCountKidsApplicant}}</h2>
+            <h4>Total Youth Applicants</h4>
+        </div>
+        <!--/panel-->
+    </div>
+    <!--/col-span-6-->
+    <div class="col-md-4">
+        <div class="well dashboard">
+            <h2 class="dash-num">{{studentsCountAdultAct}}</h2>
+            <h4>Total Active Adult Students</h4>
+        </div>
+        <hr>
+        <div class="well dashboard">
+            <h2 class="dash-num">{{studentsCountAdultApplicant}}</h2>
+            <h4>Total Adult Applicants</h4>
+        </div>
+        <!--/panel-->
+    </div>
+<!--/row-->
 </template>
