@@ -1,17 +1,38 @@
 <template name="login">
-  <form class="main form page">
-    <div class="form-group">
-      <label class="control-label" for="loginEmail">Email</label>
-      <div class="controls">
-        <input name="loginEmail" id="loginEmail" type="email" >
-      </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2></h2>
     </div>
-    <div class="form-group">
-      <label class="control-label" for="loginPassword">Password</label>
-      <div class="controls">
-        <input name="loginPassword" id="loginPassword" type="password" >
-      </div>
+    <div class="col-md-4">
+      <h2>Please Login Below</h2>
     </div>
-      <input type="submit" value="Login">
-  </form>
+    <div class="col-md-4">
+      <h2></h2>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <form id="login-form" class="form page">
+        <div class="form-group">
+          <label class="control-label" for="loginEmail">Email</label>
+          <div class="controls">
+            <input name="loginEmail" id="loginEmail" type="email" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="loginPassword">Password</label>
+          <div class="controls">
+            <input name="loginPassword" id="loginPassword" type="password" >
+          </div>
+        </div>
+          <input type="submit" value="Login">
+      </form>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
 </template>

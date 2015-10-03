@@ -1,0 +1,205 @@
+<template name="instructorSubmit">
+  <form class="general-form">
+    <div class="form-group">
+      <label class="control-label" for="status">Status</label>
+      <div>
+        <select name="status" id="status">
+          <option value="Applicant">Applicant</option>
+          <option value="Prospective">Prospective</option>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="type">Type</label>
+      <div>
+        <select name="type" id="type">
+          <option value="Volunteer Instructor">Volunteer Instructor</option>
+          <option value="Project Lead">Project Lead</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Paid Instructor">Paid Instructor</option>
+        </select>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="first_name">First Name</label>
+      <div>
+        <input name="first_name" id="first_name" type="text" value="" placeholder="Instructor First Name" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="last_name">Last Name</label>
+      <div>
+        <input name="last_name" id="last_name" type="text" value="" placeholder="Instructor Last Name" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="dob">Date of Birth</label>
+      <div>
+        <input name="dob" id="dob" type="date" value="" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="email">Email</label>
+      <div>
+        <input name="email" id="email" type="text" value="" placeholder="Instructor Email" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="phone">Phone</label>
+      <div>
+        <input name="phone" id="phone" type="text" value="" placeholder="Instructor Phone" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="park_check">Parks & Rec Background Check Completed</label>
+      <div>
+        <select name="park_check" id="park_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="park_check_date">Date Last Parks & Rec Background Check Was Completed</label>
+      <div>
+        <input name="park_check_date" id="park_check_date" type="date" value="" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_criminal_check">PA Criminal Background Check Completed</label>
+      <div>
+        <select name="pa_criminal_check" id="pa_criminal_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_criminal_check_date">Date Last PA Criminal Background Check Was Completed</label>
+      <div>
+        <input name="pa_criminal_check_date" id="pa_criminal_check_date" type="date" value="" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_child_check">PA Child Abuse Check Completed</label>
+      <div>
+        <select name="pa_child_check" id="pa_child_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_child_check_date">Date Last PA Child Abuse Check Was Completed</label>
+      <div>
+        <input name="pa_child_check_date" id="pa_child_check_date" type="date" value="" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="fbi_check">FBI Criminal Background Check Completed</label>
+      <div>
+        <select name="fbi_check" id="fbi_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="fbi_check_date">Date Last FBI Criminal Background Check Was Completed</label>
+      <div>
+        <input name="fbi_check_date" id="fbi_check_date" type="date" value="" class="form-control"/>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="orientation">Orientation Completed</label>
+      <div>
+        <select name="orientation" id="orientation">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="abuse">Sexual Abuse and Molestation Training</label>
+      <div>
+        <select name="abuse" id="abuse">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="classroom">Initial Classroom Training</label>
+      <div>
+        <select name="classroom" id="classroom">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="annual">Date of Last Annual Training</label>
+      <div>
+        <input name="annual" id="annual" type="date" value="" class="form-control"/>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="employer">Employer</label>
+      <div>
+        <input name="employer" id="employer" type="text" value="" placeholder="Instructor Employer" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="position">Position</label>
+      <div>
+        <input name="position" id="position" type="text" value="" placeholder="Instructor Position" class="form-control"/>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="address1">Address</label>
+      <div>
+        <input name="address1" id="address1" type="text" value="" placeholder="Instructor Address" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="address2"></label>
+      <div>
+        <input name="address2" id="address2" type="text" value="" placeholder="Instructor Address" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="city">City</label>
+      <div>
+        <input name="city" id="city" type="text" value="" placeholder="Instructor City" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="state">State</label>
+      <div>
+        <input name="state" id="state" type="text" value="" placeholder="Instructor State" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="zip">Zip</label>
+      <div>
+        <input name="zip" id="zip" type="zip" value="" placeholder="Instructor Zip" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="country">Country</label>
+      <div>
+        <select name="country" id="country">
+          <option value="United States">United States</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+  <hr>
+</template>
