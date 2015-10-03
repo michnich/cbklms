@@ -10,3 +10,6 @@ Meteor.publish('inforequests', function() {
   return Inforequests.find();
 });
 
+Meteor.publish('instructors', function() {
+  return Instructors.find();
+});
