@@ -255,3 +255,17 @@ a{
 #confirmation{
   padding: 0px 0px 0px 20px;
 }
+
+#login-form{
+  background: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  width: 400px;
+}
+.row{
+  width: 100%;
+}

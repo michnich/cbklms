@@ -1,0 +1,12 @@
+<template name="instructorItem">
+  <div id="student-list">
+    <div class="student">
+      <div class="student-content">
+        <h3>{{first_name}} {{last_name}} </h3><h5> Status: {{status}}</h5>
+      </div>
+
+      <a href="{{pathFor 'instructorPage'}}" class="discuss btn btn-default">Instructor Info</a>
+      <a id="edit" href="{{pathFor 'instructorEdit'}}"> Edit</a>
+    </div>
+  </div>
+</template>

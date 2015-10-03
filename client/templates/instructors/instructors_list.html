@@ -1,0 +1,11 @@
+<template name="instructorList">
+  <div class="row">
+    <div class="col-md-11">
+      <div class="students">
+        {{#each instructors}}
+          {{> instructorItem}}
+        {{/each}}
+      </div>
+    </div>
+  </div> 
+</template>
