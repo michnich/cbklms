@@ -17,6 +17,9 @@ Template.management.helpers({
   studentsCountAdultApplicant: function() {
     return Students.find({status: "Applicant", program: "Dev Training"}).count();
   },
+  instructorsCount: function() {
+    return Instructors.find({status: "Active"}).count();
+  },
   infoRequestCountNew: function() {
     return Inforequests.find().count();
   }
