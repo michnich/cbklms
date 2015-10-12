@@ -1,0 +1,217 @@
+<template name="instructorEdit">
+  <form class="general-form">
+    <div class="form-group">
+      <label class="control-label" for="status">Status</label>
+      <div>
+        <select name="status" id="status">
+          <option value="Applicant">Applicant</option>
+          <option value="Prospective">Prospective</option>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+          <option selected="selected" value="{{status}}">{{status}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="type">Type</label>
+      <div>
+        <select name="type" id="type">
+          <option value="Volunteer Instructor">Volunteer Instructor</option>
+          <option value="Project Lead">Project Lead</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Paid Instructor">Paid Instructor</option>
+          <option selected="selected" value="{{type}}">{{type}}</option>
+        </select>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="first_name">First Name</label>
+      <div>
+        <input name="first_name" id="first_name" type="text" value="{{first_name}}" placeholder="{{first_name}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="last_name">Last Name</label>
+      <div>
+        <input name="last_name" id="last_name" type="text" value="{{last_name}}" placeholder="{{last_name}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="dob">Date of Birth</label>
+      <div>
+        <input name="dob" id="dob" type="date" value="{{dob}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="email">Email</label>
+      <div>
+        <input name="email" id="email" type="text" value="{{email}}" placeholder="{{email}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="phone">Phone</label>
+      <div>
+        <input name="phone" id="phone" type="text" value="{{phone}}" placeholder="{{phone}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="park_check">Parks & Rec Background Check Completed</label>
+      <div>
+        <select name="park_check" id="park_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{park_check}}">{{park_check}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="park_check_date">Date Last Parks & Rec Background Check Was Completed</label>
+      <div>
+        <input name="park_check_date" id="park_check_date" type="date" value="{{date}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_criminal_check">PA Criminal Background Check Completed</label>
+      <div>
+        <select name="pa_criminal_check" id="pa_criminal_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{pa_criminal_check}}">{{pa_criminal_check}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_criminal_check_date">Date Last PA Criminal Background Check Was Completed</label>
+      <div>
+        <input name="pa_criminal_check_date" id="pa_criminal_check_date" type="date" value="{{pa_criminal_check_date}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_child_check">PA Child Abuse Check Completed</label>
+      <div>
+        <select name="pa_child_check" id="pa_child_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{pa_child_check}}">{{pa_child_check}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="pa_child_check_date">Date Last PA Child Abuse Check Was Completed</label>
+      <div>
+        <input name="pa_child_check_date" id="pa_child_check_date" type="date" value="{{pa_child_check_date}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="fbi_check">FBI Criminal Background Check Completed</label>
+      <div>
+        <select name="fbi_check" id="fbi_check">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{fbi_check}}">{{fbi_check}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="fbi_check_date">Date Last FBI Criminal Background Check Was Completed</label>
+      <div>
+        <input name="fbi_check_date" id="fbi_check_date" type="date" value="{{fbi_check_date}}" class="form-control"/>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="orientation">Orientation Completed</label>
+      <div>
+        <select name="orientation" id="orientation">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{orientation}}">{{orientation}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="abuse">Sexual Abuse and Molestation Training</label>
+      <div>
+        <select name="abuse" id="abuse">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{abuse}}">{{abuse}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="classroom">Initial Classroom Training</label>
+      <div>
+        <select name="classroom" id="classroom">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option selected="selected" value="{{classroom}}">{{classroom}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="annual">Date of Last Annual Training</label>
+      <div>
+        <input name="annual" id="annual" type="date" value="{{annual}}" class="form-control"/>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="employer">Employer</label>
+      <div>
+        <input name="employer" id="employer" type="text" value="{{employer}}" placeholder="{{employer}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="position">Position</label>
+      <div>
+        <input name="position" id="position" type="text" value="{{position}}" placeholder="{{position}}" class="form-control"/>
+      </div>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label class="control-label" for="address1">Address</label>
+      <div>
+        <input name="address1" id="address1" type="text" value="{{address1}}" placeholder="{{address1}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="address2"></label>
+      <div>
+        <input name="address2" id="address2" type="text" value="{{address2}}" placeholder="{{address2}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="city">City</label>
+      <div>
+        <input name="city" id="city" type="text" value="{{city}}" placeholder="{{city}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="state">State</label>
+      <div>
+        <input name="state" id="state" type="text" value="{{state}}" placeholder="{{state}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="zip">Zip</label>
+      <div>
+        <input name="zip" id="zip" type="zip" value="{{zip}}" placeholder="{{zip}}" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="country">Country</label>
+      <div>
+        <select name="country" id="country">
+          <option value="United States">United States</option>
+          <option selected="selected" value="{{country}}">{{country}}</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete Instructor</a>
+  </form>
+  <hr>
+</template>
