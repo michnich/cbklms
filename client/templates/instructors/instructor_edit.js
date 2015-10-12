@@ -1,8 +1,10 @@
-Template.instructorSubmit.events({
+Template.instructorEdit.events({
   'submit form': function(e) {
     e.preventDefault();
 
-    var instructor = {
+    var currentInstructorId = this._id;
+
+    var instructorProperties = {
       status: $(e.target).find('[name=status]').val(),
       first_name: $(e.target).find('[name=first_name]').val(),
       last_name: $(e.target).find('[name=last_name]').val(),
@@ -32,15 +34,22 @@ Template.instructorSubmit.events({
       country: $(e.target).find('[name=country]').val()
     };
 
-    Meteor.call('instructorInsert', instructor, function(error, result) {
-      // display the error to the user and abort
-      if (error)
-        return alert(error.reason);
+    Instructors.update(currentInstructorId, {$set: instructorProperties}, function(error) {
+      if (error) {
+        throwError(error.reason);
+      } else {
+        Router.go('instructorPage', {_id: currentInstructorId});
+      }
+    });
+  },
 
-      if (result.instructorExists)
-        alert('This instructor already exists');
+  'click .delete': function(e) {
+    e.preventDefault();
 
-      Router.go('instructorPage', {_id: result._id});  
-    });    
-  }
+    if (confirm("Delete this instructor?")) {
+      var currentInstructorId = this._id;
+      Instructors.remove(currentInstructorId);
+      Router.go('instructorList');
+    }
+  }   
 });

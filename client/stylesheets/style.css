@@ -269,3 +269,6 @@ a{
 .row{
   width: 100%;
 }
+#attendancedate{
+  width: 170px;
+}
