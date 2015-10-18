@@ -33,15 +33,10 @@
     <hr>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4>Attendance</h4>
+        <h4>Instructor Check In</h4>
       </div>
       <div class="panel-body">
         {{> instructorattendanceSubmit}}
-        <ul>
-          {{#each instructorattendance}}
-            {{> instructorattendanceItem}}
-          {{/each}}
-        </ul>
       </div>
     </div>
     <hr>
@@ -65,7 +60,18 @@
     <hr>
   </div>
   <div class="col-md-4">
-
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Attendance</h4>
+      </div>
+      <div class="panel-body">
+        <ul>
+          {{#each instructorattendance}}
+            {{> instructorattendanceItem}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
   </div>
   <div class="col-md-6">
     <div class="panel panel-default">

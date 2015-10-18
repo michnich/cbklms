@@ -272,3 +272,8 @@ a{
 #attendancedate{
   width: 170px;
 }
+.date-list ul{
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
