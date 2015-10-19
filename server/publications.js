@@ -13,3 +13,7 @@ Meteor.publish('inforequests', function() {
 Meteor.publish('instructors', function() {
   return Instructors.find();
 });
+
+Meteor.publish('instructorattendance', function() {
+  return InstructorAttendance.find();
+});
