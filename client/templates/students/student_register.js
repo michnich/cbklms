@@ -68,7 +68,7 @@ Template.studentRegister.events({
       if (result.studentExists)
         throwError('This Student Already Exists');
 
-      Router.go('inforequestConfirm');
+      Router.go('studentEnrolled');
     });
   }
 });
