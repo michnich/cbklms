@@ -1,0 +1,29 @@
+<template name="skillAdd">
+	<form class="general-form">
+		<label class="control-label" for="name">Name</label>
+		<div>
+        	<input name="name" type="text" value="" placeholder="Skill Name" class="form-control"/>
+      	</div>
+      	<label class="control-label" id="category" for="category">Category</label>
+		<div>
+	        <select name="category">
+	          <option value="HTML">HTML</option>
+	          <option value="CSS">CSS</option>
+	          <option value="Javascript">Javascript</option>
+	          <option value="Developer Tools">Developer Tools</option>
+	        </select>
+      	</div>
+
+      	<label class="control-label" id= "level" for="level">Level</label>
+		<div>
+	        <select name="level">
+	          <option value="1">Level 1</option>
+	          <option value="2">Level 2</option>
+	          <option value="3">Level 3</option>
+	          <option value="4">Level 4</option>
+	        </select>
+      </div>
+      <br>
+      <input type="submit" value="Submit" class="btn btn-primary"/>
+	</form>
+</template>

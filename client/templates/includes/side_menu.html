@@ -14,6 +14,7 @@
             <ul class="nav nav-stacked collapse" id="menu2">
                 {{#if currentUser}}<li><a href="{{pathFor 'instructorList'}}"> Instructor List</a></li>{{/if}}
                 {{#if currentUser}}<li><a href="{{pathFor 'instructorSubmit'}}"> Submit Instructor</a></li>{{/if}}
+                {{#if currentUser}}<li><a href ="{{pathFor 'skillList'}}"> Technical Skills </a></li>{{/if}}
             </ul>
         </li>
         <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu3"><i class="glyphicon glyphicon-stats"></i> Reports <i class="glyphicon glyphicon-chevron-down"></i></a>

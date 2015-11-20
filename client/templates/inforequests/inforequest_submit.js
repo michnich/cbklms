@@ -10,6 +10,7 @@ Template.inforequestSubmit.events({
       message: $(e.target).find('[name=message]').val()
     };
 
+    inforequest.status = "Incomplete"; /*idk if this works*/
     inforequest._id = Inforequests.insert(inforequest);
     Router.go('inforequestConfirm', inforequest);
   }

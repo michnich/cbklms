@@ -1,6 +1,35 @@
 <template name="studentPage">
   <div class="student-page page">
+    {{#if missed4Weeks}}
+      <div class = "absent well well-sm">Student has been absent for more than 4 weeks</div>
+    {{/if}}
     {{> studentDetails}}
+	<div class="col-md-4">
+    <hr>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Student Check In</h4>
+      </div>
+      <div class="panel-body">
+        {{> studentattendanceSubmit}}
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Attendance</h4>
+      </div>
+      <div class="panel-body">
+        <ul>
+          {{#each studentattendance}}
+            {{> studentattendanceItem}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
     <ul class="projects">
       {{#each projects}}
         {{> projectItem}}

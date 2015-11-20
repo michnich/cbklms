@@ -5,6 +5,10 @@
         <h3>PROJECT CARD</h3>
         <strong><a href="{{pathFor 'projectPage'}}">{{project_name}}</a></strong>
         <p>{{description}}</p>
+        <h5 style="display: inline;">Skills:</h5>
+        {{#each projectCardSkills}}
+          {{> projectCardSkill}}
+        {{/each}}
         <br>
       </li>
     </div>

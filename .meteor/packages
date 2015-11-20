@@ -11,3 +11,8 @@ sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
 twbs:bootstrap
+velocity:core
+velocity:html-reporter
+mike:mocha
+momentjs:moment
+msavin:mongol

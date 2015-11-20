@@ -1,5 +1,10 @@
 <template name="inforequestsList">
   <div class="students">
+  	<label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}" />
+        Hide Completed
+    </label>
+
     {{#each inforequests}}
       {{> inforequestItem}}
     {{/each}}

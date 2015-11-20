@@ -1,0 +1,25 @@
+<template name="inforequestEdit">
+  <form class="main form page">
+    <div class="form-group">
+      <h2>Name: {{name}}</h2>
+      <br>
+      <h4>Email: {{email}}</h4>
+      <h4>Subject: {{subject}}</h4> 
+      <h4>Message: {{message}}</h4>  
+      <h4>Comments: {{comments}}</h4>    
+      <label class="control-label" for="status">Status</label>
+      <div>
+        <select name="status" id="status">
+          <option value="Complete">Complete</option>
+          <option value="Incomplete">Incomplete</option>
+          <option selected="selected" value="{{status}}">{{status}}</option>
+        </select>
+      </div>
+      <label class="control-label" for="comments">Comments</label>
+      <div>
+        <input name="comments" id="comments" type="text" value="{{comments}}" placeholder="{{comments}}" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+	</form>
+</template>

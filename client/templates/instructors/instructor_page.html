@@ -1,6 +1,12 @@
 <template name="instructorPage">
   <div class="col-md-4">
     <hr>
+    {{#if missed4Weeks}}
+      <div class = "absent well well-sm">Insturctor has been absent for more than 4 weeks</div>
+    {{/if}}
+    {{#if needsBackgroundCheck}}
+     <div class = "absent well well-sm">Insturctor is not up to date on background checks</div>
+    {{/if}}
     <div class="panel panel-default">
       <div class="panel-body">
         <h4>{{first_name}} {{last_name}}</h4>
@@ -98,48 +104,6 @@
       <div class="panel-body">
         <h5>Current Employer: {{employer}}</h5>
         <h5>Current Position: {{position}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-4">
-
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Bio</h4>
-      </div>
-      <div class="panel-body">
-        <h5>{{about}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-4">
-
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Experience</h4>
-      </div>
-      <div class="panel-body">
-        <h5>{{experience}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-4">
-
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Volunteer Reason</h4>
-      </div>
-      <div class="panel-body">
-        <h5>{{reason}}</h5>
       </div>
     </div>
     <hr>
