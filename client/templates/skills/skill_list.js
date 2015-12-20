@@ -2,7 +2,6 @@ Template.skillList.onCreated(function() {
   Session.set('showSkills', {});
 });
 
-var qry = {};
 
 Template.skillList.helpers({
   skills: function() {
@@ -13,17 +12,32 @@ Template.skillList.helpers({
 
 Template.skillList.events({
 	'change #level':function(event){
+		var qry = {};
 		var e = document.getElementById("level");
-		qry["level"] = e.options[e.selectedIndex].value;
-		if (qry["level"] == "All") {
-			qry["level"] = null;
-		}
+		var selectedLevel = e.options[e.selectedIndex].value;
+		e = document.getElementById("category");
+		var selectedCategory = e.options[e.selectedIndex].value;
+		if (selectedLevel != "All") {
+      		qry["level"] = selectedLevel;
+    	}
+	    if (selectedCategory != "All"){
+	       qry["category"] = selectedCategory;
+	    }
 		Session.set("showSkills", qry);	
 	},
 
 	'change #category':function(event){	
-		var e = document.getElementById("category");
-		qry["category"] = e.options[e.selectedIndex].value;
-		Session.set("showSkills", qry);	
+		var qry = {};
+		var e = document.getElementById("level");
+		var selectedLevel = e.options[e.selectedIndex].value;
+		e = document.getElementById("category");
+		var selectedCategory = e.options[e.selectedIndex].value;
+		if (selectedLevel != "All") {
+      		qry["level"] = selectedLevel;
+    	}
+	    if (selectedCategory != "All"){
+	       qry["category"] = selectedCategory;
+	    }
+		Session.set("showSkills", qry);	 
 	}
 });

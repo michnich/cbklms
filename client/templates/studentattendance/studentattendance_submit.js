@@ -14,9 +14,10 @@ Template.studentattendanceSubmit.helpers({
 Template.studentattendanceSubmit.events({
   'submit form': function(e, template) {
     e.preventDefault();
+    var date = $(e.target).find('[name=attendancedate]').val();
 
     var studentattendance = {
-      attendancedate: $(e.target).find('[name=attendancedate]').val(),
+      attendancedate: new Date(moment(date).toDate()), //changed from what "date" is up above
       studentId: template.data._id
     };
     var errors = {};

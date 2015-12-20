@@ -118,6 +118,22 @@
         <span class="help-block">{{errorMessage 'program'}}</span>
       </div>
     </div>
+    <div class="form-group {{errorClass 'eme_contact'}}">
+      <label class="control-label" for="eme_contact">Emergency Contact</label>
+      <div>
+        <input name="eme_contact" id="eme_contact" type="eme_contact" value="" placeholder="Emergency Contact" class="form-control"/>
+        <span class="help-block">{{errorMessage 'eme_contact'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'eme_number'}}">
+      <label class="control-label" for="eme_number">Emergency Contact Number</label>
+      <div>
+        <input name="eme_number" id="eme_number" type="eme_number" value="" placeholder="Emergency Contact Number" class="form-control"/>
+        <span class="help-block">{{errorMessage 'eme_number'}}</span>
+      </div>
+    </div>
+    <div class = "well well-sm">
+    <h4 style="color: #EC5C61">Complete this section for child students</h4>
     <div class="form-group {{errorClass 'elm_school'}}">
       <label class="control-label" for="elm_school">Elementary School</label>
       <div>
@@ -153,22 +169,54 @@
         <span class="help-block">{{errorMessage 'parent_email'}}</span>
       </div>
     </div>
-    <div class="form-group {{errorClass 'eme_contact'}}">
-      <label class="control-label" for="eme_contact">Emergency Contact</label>
+  </div>
+  <div class = "well well-sm">
+    <h4 style="color: #EC5C61">Complete this section for adult students</h4>
+    <div class="form-group">
+      <label class="control-label" for="ta">Willing to TA in class</label>
       <div>
-        <input name="eme_contact" id="eme_contact" type="eme_contact" value="" placeholder="Emergency Contact" class="form-control"/>
-        <span class="help-block">{{errorMessage 'eme_contact'}}</span>
+        <select name="ta" id="ta">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
       </div>
     </div>
-    <div class="form-group {{errorClass 'eme_number'}}">
-      <label class="control-label" for="eme_number">Emergency Contact Number</label>
-      <div>
-        <input name="eme_number" id="eme_number" type="eme_number" value="" placeholder="Emergency Contact Number" class="form-control"/>
-        <span class="help-block">{{errorMessage 'eme_number'}}</span>
-      </div>
+    <div class="form-group">
+      <label class="control-label" for="education">Education</label>
+      <input name="education" id="education" type="education" value="" placeholder="Education" class="form-control"/>
     </div>
+    <div class="form-group">
+      <label class="control-label" for="college">College</label>
+      <input name="college" id="college" type="college" value="" placeholder="College" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="employer">Employer</label>
+      <input name="employer" id="employer" type="employer" value="" placeholder="Employer" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="position">Position</label>
+      <input name="position" id="position" type="position" value="" placeholder="Position" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="job_duties">Job description</label>
+      <input name="job_duties" id="job_duties" type="job_duties" value="" placeholder="Job Description" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="volunteer">Volunteer</label>
+      <input name="volunteer" id="volunteer" type="volunteer" value="" placeholder="Volunteer" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="goal">Program goal</label>
+      <input name="goal" id="goal" type="goal" value="" placeholder="Program goal" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="community">Community contribution</label>
+      <input name="community" id="community" type="community" value="" placeholder="Community contribution" class="form-control"/>
+    </div>
+  </div>
+
     <div class="form-group {{errorClass 'reg_packet'}}">
-      <label class="control-label" for="reg_packet">Registration Packet Received</label>
+      <label class="conrol-label" for="reg_packet">Registration Packet Received</label>
       <div>
         <select name="reg_packet" id="reg">
           <option value="Yes">Yes</option>
@@ -177,7 +225,7 @@
         <span class="help-block">{{errorMessage 'reg_packet'}}</span>
       </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <input type="submit" value="Submit" class="btn btn-primary" style="color: white; background-color: #28A4BD; border-color: #28A4BD"/>
   </form>
   <br>
 </template>

@@ -1,6 +1,6 @@
 Template.instructorPage.helpers({
   instructorattendance: function() {
-    return InstructorAttendance.find({instructorId: this._id}, {sort: {submitted: -1}});
+    return InstructorAttendance.find({instructorId: this._id}, {sort: {submitted: -1}, limit: 4});
   },
   missed4Weeks: function() {
    Meteor.subscribe("instructorattendance", {instructorId: this._id});

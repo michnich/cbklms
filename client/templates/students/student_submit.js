@@ -40,7 +40,16 @@ Template.studentSubmit.events({
       eme_contact: $(e.target).find('[name=eme_contact]').val(),
       eme_number: $(e.target).find('[name=eme_number]').val(),
       app_essay: $(e.target).find('[name=app_essay]').val(),
-      dev_exp: $(e.target).find('[name=dev_exp]').val()
+      dev_exp: $(e.target).find('[name=dev_exp]').val(),
+      ta: $(e.target).find('[name=ta]').val(),
+      education: $(e.target).find('[name=education]').val(),
+      employer: $(e.target).find('[name=employer]').val(),
+      position: $(e.target).find('[name=position]').val(),
+      job_duties: $(e.target).find('[name=job_duties]').val(),
+      volunteer: $(e.target).find('[name=volunteer]').val(),
+      goal: $(e.target).find('[name=goal]').val(),
+      community: $(e.target).find('[name=community]').val(),
+      submitted: new Date() //added here, removed from collection
     };
 
     var errors = validateStudent(student);

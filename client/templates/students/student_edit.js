@@ -22,7 +22,8 @@ Template.studentEdit.events({
       eme_contact: $(e.target).find('[name=eme_contact]').val(),
       eme_number: $(e.target).find('[name=eme_number]').val(),
       reg_packet: $(e.target).find('[name=reg_packet]').val(),
-      last_aud: $(e.target).find('[name=last_aud]').val()
+      last_aud: $(e.target).find('[name=last_aud]').val(),
+      updated: moment().toDate() //added
     };
 
     Students.update(currentStudentId, {$set: studentProperties}, function(error) {

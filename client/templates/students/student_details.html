@@ -1,5 +1,5 @@
 <template name="studentDetails">
-  <div class="col-md-4">
+  <div class="col-md-6">
     <hr>
     <div class="panel panel-default">
       <div class="panel-body">
@@ -35,13 +35,10 @@
     <hr>
 
   </div>
-  <div class="col-md-4">
-
-  </div>
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4>Student Address</h4>
+        <h4>Address</h4>
       </div>
       <div class="panel-body">
           <h5>{{address1}}</h5>
@@ -55,9 +52,6 @@
     </div>
     <!--/panel-->
     <hr>
-  </div>
-  <div class="col-md-4">
-
   </div>
   <div class="col-md-6">
     <div class="panel panel-default">
@@ -74,9 +68,7 @@
     <!--/panel-->
     <hr>
   </div>
-  <div class="col-md-4">
-
-  </div>
+  {{#if childStudent}}
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -92,9 +84,8 @@
     <!--/panel-->
     <hr>
   </div>
-  <div class="col-md-4">
+  {{/if}}
 
-  </div>
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -108,9 +99,6 @@
     </div>
     <!--/panel-->
     <hr>
-  </div>
-  <div class="col-md-4">
-
   </div>
   <div class="col-md-6">
     <div class="panel panel-default">
@@ -128,9 +116,7 @@
     <!--/panel-->
     <hr>
   </div>
-  <div class="col-md-4">
-
-  </div>
+  {{#if adultStudent}}
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -152,4 +138,5 @@
     <!--/panel-->
     <hr>
   </div>
+  {{/if}}
 </template>

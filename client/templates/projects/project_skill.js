@@ -5,3 +5,5 @@ Template.projectSkill.helpers({
     return a.hostname;
   }
 });
+
+

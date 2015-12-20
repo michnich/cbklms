@@ -13,7 +13,7 @@ Template.inforequestEdit.events({
       if (error) {
         throwError(error.reason);
       } else {
-        Router.go('inforequests', {_id: currentId});
+        Router.go('inforequestPage', {_id: currentId});
       }
     });
   },

@@ -1,102 +1,81 @@
 <template name="instructorPage">
-  <div class="col-md-4">
-    <hr>
-    {{#if missed4Weeks}}
-      <div class = "absent well well-sm">Insturctor has been absent for more than 4 weeks</div>
+  <style>
+    .absent{
+      background-color: #EC5C61;
+      color: #45080a;
+    }
+  </style>
+  {{#if missed4Weeks}}
+      <div class = "absent well well-sm">Instructor has been absent for more than 4 weeks</div>
     {{/if}}
     {{#if needsBackgroundCheck}}
-     <div class = "absent well well-sm">Insturctor is not up to date on background checks</div>
+     <div class = "absent well well-sm">Instructor is not up to date on background checks</div>
     {{/if}}
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h4>{{first_name}} {{last_name}}</h4>
-        <h5>Date of Birth: {{dob}}</h5>
-        <h5>Instructor Status: {{status}}</h5>
-        <h5>Instructor Type: {{type}}</h5>
-        <h5>Email: {{email}}</h5>
-        <h5>Phone: {{phone}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-6">
-    <hr>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Address</h4>
-      </div>
-      <div class="panel-body">
-        <h5>Address: {{address1}}</h5>
-        <h5>Address: {{address2}}</h5>
-        <h5>City: {{city}}</h5>
-        <h5>State: {{state}}</h5>
-        <h5>Zip: {{zip}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-4">
-    <hr>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Instructor Check In</h4>
-      </div>
-      <div class="panel-body">
-        {{> instructorattendanceSubmit}}
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-7">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Clearances</h4>
-      </div>
-      <div class="panel-body">
-        <h5><strong>Parks & Rec Background Check Completed:</strong> {{park_check}}</h5>
-        <h5><strong>Date Last Parks & Rec Background Check Was Completed:</strong> {{park_check_date}}</h5>
-        <h5><strong>PA Criminal Background Check Completed:</strong> {{pa_criminal_check}}</h5>
-        <h5><strong>Date Last PA Criminal Background Check Was Completed:</strong> {{pa_criminal_check_date}}</h5>
-        <h5><strong>PA Child Abuse Check Completed:</strong> {{pa_child_check}}</h5>
-        <h5><strong>Date Last PA Child Abuse Check Was Completed:</strong> {{pa_child_check_date}}</h5>
-        <h5><strong>FBI Criminal Background Check Completed:</strong> {{fbi_check}}</h5>
-        <h5><strong>Date Last FBI Criminal Background Check Was Completed:</strong> {{fbi_check_date}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Attendance</h4>
-      </div>
-      <div class="panel-body">
-        <ul>
-          {{#each instructorattendance}}
-            {{> instructorattendanceItem}}
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Training</h4>
-      </div>
-      <div class="panel-body">
-        <h5>Orientation Completed: {{orientation}}</h5>
-        <h5>Sexual Abuse and Molestation Training: {{abuse}}</h5>
-        <h5>Initial Classroom Training: {{classroom}}</h5>
-        <h5>Date of Last Annual Training: {{annual}}</h5>
-      </div>
-    </div>
-    <hr>
-  </div>
-  <div class="col-md-4">
 
+
+  <div class = "row">
+    <div class="col-md-6">
+      <hr>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 style="color: #EC5C61; font-weight: bold">{{first_name}} {{last_name}}</h4>
+          <h5>Date of Birth: {{dob}}</h5>
+          <h5>Instructor Status: {{status}}</h5>
+          <h5>Instructor Type: {{type}}</h5>
+          <h5>Email: {{email}}</h5>
+          <h5>Phone: {{phone}}</h5>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="col-md-6">
+      <hr>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Instructor Check In</h4>
+        </div>
+        <div class="panel-body">
+          {{> instructorattendanceSubmit}}
+        </div>
+      </div>
+      <hr>
+    </div>
   </div>
-  <div class="col-md-6">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Clearances</h4>
+        </div>
+        <div class="panel-body">
+          <h5>Parks & Rec Background Check Completed: <span style="color: #EC5C61; font-weight: bold">{{park_check}}</span></h5>
+          <h5>Date Last Parks & Rec Background Check Was Completed: <span style="color: #EC5C61; font-weight: bold">{{park_check_date}}</span></h5>
+          <h5>PA Criminal Background Check Completed: <span style="color: #EC5C61; font-weight: bold"> {{pa_criminal_check}} </span></h5>
+          <h5>Date Last PA Criminal Background Check Was Completed:<span style="color: #EC5C61; font-weight: bold"> {{pa_criminal_check_date}} </span></h5>
+          <h5>PA Child Abuse Check Completed: <span style="color: #EC5C61; font-weight: bold">{{pa_child_check}} </span></h5>
+          <h5>Date Last PA Child Abuse Check Was Completed: <span style="color: #EC5C61; font-weight: bold">{{pa_child_check_date}}</span></h5>
+          <h5>FBI Criminal Background Check Completed:<span style="color: #EC5C61; font-weight: bold"> {{fbi_check}}</span></h5>
+          <h5>Date Last FBI Criminal Background Check Was Completed:<span style="color: #EC5C61; font-weight: bold"> {{fbi_check_date}} </span></h5>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Training</h4>
+        </div>
+        <div class="panel-body">
+          <h5>Orientation Completed: <span style="color: #EC5C61; font-weight: bold"> {{orientation}} </span></h5>
+          <h5>Sexual Abuse and Molestation Training: <span style="color: #EC5C61; font-weight: bold"> {{abuse}} </span></h5>
+          <h5>Initial Classroom Training: <span style="color: #EC5C61; font-weight: bold">{{classroom}} </span></h5>
+          <h5>Date of Last Annual Training: <span style="color: #EC5C61; font-weight: bold">{{annual}} </span></h5>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4>Employment</h4>
@@ -107,5 +86,42 @@
       </div>
     </div>
     <hr>
+    </div>
   </div>
+
+  <br>
+
+  <div class="row">
+     <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Address</h4>
+        </div>
+        <div class="panel-body">
+          <h5>Address: {{address1}}</h5>
+          <h5>Apt: {{address2}}</h5>
+          <h5>City: {{city}}</h5>
+          <h5>State: {{state}}</h5>
+          <h5>Zip: {{zip}}</h5>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Attendance</h4>
+        </div>
+        <div class="panel-body">
+          <ul>
+            {{#each instructorattendance}}
+              {{> instructorattendanceItem}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>    
+  </div>
+
 </template>

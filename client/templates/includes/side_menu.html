@@ -1,39 +1,36 @@
 <template name="side">
-{{#if currentUser}}<div class="container-fluid">
-            <!-- Left column -->
+{{#if currentUser}}
+<div class="container-fluid" id="sidebar">
+    <!-- Left column -->
     <ul class="nav nav-stacked">
-        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu"><i class="glyphicon glyphicon-user"></i> Students <i class="glyphicon glyphicon-chevron-down"></i></a>
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu" id="header"><i class="glyphicon glyphicon-user"></i> Students <i class="glyphicon glyphicon-chevron-down"></i></a>
             <ul class="nav nav-stacked collapse in" id="userMenu">
-                {{#if currentUser}}<li><a href="{{pathFor 'inforequestsList'}}"> Info Requests</a></li>{{/if}}
-                {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}"> Student List</a></li>{{/if}}
-                {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}"> Submit Student</a></li>{{/if}}
+                {{#if currentUser}}<li><a href="{{pathFor 'studentList'}}" id="subheader"> Student List</a></li>{{/if}}
+                {{#if currentUser}}<li><a href="{{pathFor 'studentSubmit'}}" id="subheader"> Submit Student</a></li>{{/if}}
             </ul>
         </li>
-        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2"><i class="glyphicon glyphicon-education"></i> Instructors <i class="glyphicon glyphicon-chevron-down"></i></a>
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2" id="header"><i class="glyphicon glyphicon-education"></i> Instructors <i class="glyphicon glyphicon-chevron-down"></i></a>
 
             <ul class="nav nav-stacked collapse" id="menu2">
-                {{#if currentUser}}<li><a href="{{pathFor 'instructorList'}}"> Instructor List</a></li>{{/if}}
-                {{#if currentUser}}<li><a href="{{pathFor 'instructorSubmit'}}"> Submit Instructor</a></li>{{/if}}
-                {{#if currentUser}}<li><a href ="{{pathFor 'skillList'}}"> Technical Skills </a></li>{{/if}}
+                {{#if currentUser}}<li><a href="{{pathFor 'instructorList'}}" id="subheader"> Instructor List</a></li>{{/if}}
+                {{#if currentUser}}<li><a href="{{pathFor 'instructorSubmit'}}" id="subheader"> Submit Instructor</a></li>{{/if}}
             </ul>
         </li>
-        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu3"><i class="glyphicon glyphicon-stats"></i> Reports <i class="glyphicon glyphicon-chevron-down"></i></a>
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu3" id="header"><i class="glyphicon glyphicon-stats"></i> Reports <i class="glyphicon glyphicon-chevron-down"></i></a>
 
             <ul class="nav nav-stacked collapse" id="menu3">
-                <li><a href="#">Class Stats</a>
-                </li>
-                <li><a href="#">Student Stats</a>
-                </li>
-                <li><a href="#">Instructor Stats</a>
-                </li>
+                <!--{{#if currentUser}}<li><a href="#" id="subheader"> Class Stats</a></li>{{/if}}-->
+                {{#if currentUser}}<li><a href="{{pathFor 'instructorStats'}}" id="subheader">Instructor Stats</a></li>{{/if}}
+                {{#if currentUser}}<li><a href ="{{pathFor 'studentStats'}}" id="subheader">Student Stats</a></li>{{/if}}
+            </ul>
+        </li>
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu4" id="header"><i class="glyphicon glyphicon-floppy-disk"></i> Admin <i class="glyphicon glyphicon-chevron-down"></i></a>
+            <ul class="nav nav-stacked collapse" id="menu4">
+                {{#if currentUser}}<li><a href="{{pathFor 'inforequestsList'}}" id="subheader"> Info Requests</a></li>{{/if}}
+                {{#if currentUser}}<li><a href="{{pathFor 'skillList'}}" id="subheader"> Technical Skills</a></li>{{/if}}
+                {{#if currentUser}}<li><a href ="{{pathFor 'addUser'}}" id="subheader"> Add Admin </a></li>{{/if}}
             </ul>
         </li>
     </ul>
-
-
-    <hr>
-<!-- /col-3 -->
-
-<!--/col-span-9-->
 </div>{{/if}}
 </template>

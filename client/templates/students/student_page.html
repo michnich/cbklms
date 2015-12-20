@@ -1,40 +1,188 @@
 <template name="studentPage">
+  <style>
+    .absent{
+      background-color: #EC5C61;
+      color: #45080a;
+    }
+  </style>
   <div class="student-page page">
     {{#if missed4Weeks}}
       <div class = "absent well well-sm">Student has been absent for more than 4 weeks</div>
     {{/if}}
-    {{> studentDetails}}
-	<div class="col-md-4">
-    <hr>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Student Check In</h4>
+
+    <div class="row-fluid">
+      <div class="col-md-6">
+        <div class = "row">
+          <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>{{first_name}} {{last_name}}</h4>
+                <h5>{{email}}</h5>
+                <h5>{{phone}}</h5>
+                <h5>Date of Birth: {{dob}}</h5>
+                <h5>GitHub Username: {{github}}</h5>
+            </div>
+          </div>
+        </div>
+        <div class = "row">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Emergency Contact Info</h4>
+            </div>
+            <div class="panel-body">
+              <h5>Emergency Contact: {{eme_contact}}</h5>
+              <h5>Emergency Contact Phone Number: {{eme_number}}</h5>
+            </div>
+            <!--/panel-body-->
+          </div>
+        </div>
       </div>
-      <div class="panel-body">
-        {{> studentattendanceSubmit}}
+      <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Student Check In</h4>
+        </div>
+        <div class="panel-body">
+          {{> studentattendanceSubmit}}
+        </div>
       </div>
     </div>
-    <hr>
   </div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4>Attendance</h4>
+
+  <div class = "row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Program Info</h4>
+        </div>
+        <div class="panel-body">
+            <h5>Student Status: {{status}}</h5>
+            <h5>Student Program: {{program}}</h5>
+            <h5>Student Type: {{type}}</h5>
+            <h5>Student Level: {{level}}</h5>
+            <h5>Last Student Audit: {{last_aud}}</h5>
+            <h5>Registration Packet Received: {{reg_packet}}</h5>
+        </div>
+        <!--/panel-body-->
       </div>
-      <div class="panel-body">
-        <ul>
-          {{#each studentattendance}}
-            {{> studentattendanceItem}}
-          {{/each}}
-        </ul>
+      <!--/panel-->
+   </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Address</h4>
+        </div>
+        <div class="panel-body">
+            <h5>{{address1}}</h5>
+            <h5>{{address2}}</h5>
+            <h5>{{city}}</h5>
+            <h5>{{state}}</h5>
+            <h5>{{zip}}</h5>
+            <h5>{{country}}</h5>
+        </div>
+        <!--/panel-body-->
+      </div>
+      <!--/panel-->
+    </div>
+
+  </div>
+
+  {{#if childStudent}}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Parent Info</h4>
+          </div>
+          <div class="panel-body">
+            <h5>Parent/Guardian: {{parent_name}}</h5>
+            <h5>Parent/Guardian Phone Number: {{parent_phone}}</h5>
+            <h5>Parent/Guardian Email: {{parent_email}}</h5>
+          </div>
+          <!--/panel-body-->
+        </div>
+        <!--/panel-->
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Education Info</h4>
+          </div>
+          <div class="panel-body">
+            <h5>Elementary School: {{elm_school}}</h5>
+            <h5>High School: {{high_school}}</h5>
+            <h5>Grade: {{grade}}</h5>
+          </div>
+          <!--/panel-body-->
+        </div>
+        <!--/panel-->
+      </div>
+    </div>
+  {{/if}}
+
+  {{#if adultStudent}}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Adult Student Info</h4>
+          </div>
+          <div class="panel-body">
+            <h5>Willing to TA in class: {{ta}}</h5>
+            <h5>Education: {{education}}</h5>
+            <h5>College: {{college}}</h5>
+            <h5>Employer: {{employer}}</h5>
+            <h5>Position: {{position}}</h5>
+            <h5>Job Duties: {{job_duties}}</h5>
+            <h5>Volunteer Work: {{volunteer}}</h5>
+            <h5>Program goal: {{goal}}</h5>
+            <h5>Community Contribution: {{community}}</h5>
+          </div>
+          <!--/panel-body-->
+        </div>
+        <!--/panel-->
+      </div>
+    </div>
+  {{/if}}
+
+  <div class = "row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Student Demographic Info</h4>
+          </div>
+          <div class="panel-body">
+            <h5>Sex: {{sex}}</h5>
+            <h5>Ethnicity: {{ethnicity}}</h5>
+            <h5>Race: {{race}}</h5>
+            <h5>Income: {{income}}</h5>
+          </div>
+          <!--/panel-body-->
+        </div>
+        <!--/panel-->
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Attendance</h4>
+        </div>
+        <div class="panel-body">
+          <ul>
+            {{#each studentattendance}}
+              {{> studentattendanceItem}}
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-    <ul class="projects">
-      {{#each projects}}
-        {{> projectItem}}
-      {{/each}}
-    </ul>
-      {{> projectSubmit}}
+
+    <!--removed ul class=projects -->
+  {{#each projects}}
+    {{> projectItem}}
+  {{/each}}
+
+  {{> projectSubmit}}
   </div>
 </template>

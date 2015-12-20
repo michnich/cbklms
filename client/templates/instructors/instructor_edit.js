@@ -31,7 +31,8 @@ Template.instructorEdit.events({
       city: $(e.target).find('[name=city]').val(),
       state: $(e.target).find('[name=state]').val(),
       zip: $(e.target).find('[name=zip]').val(),
-      country: $(e.target).find('[name=country]').val()
+      country: $(e.target).find('[name=country]').val(),
+      updated: new Date() //added this
     };
 
     Instructors.update(currentInstructorId, {$set: instructorProperties}, function(error) {

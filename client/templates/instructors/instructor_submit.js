@@ -29,7 +29,8 @@ Template.instructorSubmit.events({
       city: $(e.target).find('[name=city]').val(),
       state: $(e.target).find('[name=state]').val(),
       zip: $(e.target).find('[name=zip]').val(),
-      country: $(e.target).find('[name=country]').val()
+      country: $(e.target).find('[name=country]').val(),
+      submitted: new Date() //moved this here from the collection method
     };
 
     Meteor.call('instructorInsert', instructor, function(error, result) {

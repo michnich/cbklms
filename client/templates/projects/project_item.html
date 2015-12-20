@@ -1,16 +1,15 @@
 <template name="projectItem">
-  <div class="col-md-10">
-    <div class="project-list">
-      <li>
-        <h3>PROJECT CARD</h3>
-        <strong><a href="{{pathFor 'projectPage'}}">{{project_name}}</a></strong>
-        <p>{{description}}</p>
-        <h5 style="display: inline;">Skills:</h5>
-        {{#each projectCardSkills}}
-          {{> projectCardSkill}}
-        {{/each}}
-        <br>
-      </li>
+  <div class="col-md-10 col-md-offset-1">
+    <div class = "panel panel-default">
+      <div class="panel-heading"><h4>Project Card</h4></div>
+      <div class="panel-body">     
+            <h3><strong><a href="{{pathFor 'projectPage'}}">{{project_name}}</a></strong></h3>
+            <p>{{description}}</p>
+            <h5 style="display: inline;">Skills:</h5>
+            {{#each projectCardSkills}}
+              {{> projectCardSkill}}
+            {{/each}}
+      </div>
     </div>
   </div>
 </template>

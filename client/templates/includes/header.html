@@ -1,6 +1,6 @@
 <template name="header">
   {{#if currentUser}}<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
+    <div class="container-fluid" id="nav">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -13,7 +13,7 @@
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}<li class=""> <a href="{{pathFor 'management'}}"><i class="glyphicon glyphicon-home"></i> Home</a></li>{{/if}}
-          {{#if currentUser}}<li><a href="#" class="logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>{{/if}}
+          {{#if currentUser}}<li><a href="{{pathFor 'logout'}}" class="logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>{{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           

@@ -1,0 +1,10 @@
+<template name="studentStats">
+	{{#if ready}}
+	<h3>Students in class last week: {{weeklyAttendance}}</h3>
+	<div>
+		<h4>Thursday Attendance: {{thursdayAttendance}}</h4>
+		<h4>Saturday Attendance: {{saturdayAttendance}}</h4>
+	</div>
+	<h3>Students lost in the past month: {{lostMonth}} </h3>
+	{{/if}}
+</template>

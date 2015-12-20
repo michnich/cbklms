@@ -1,0 +1,22 @@
+<template name="addUser">
+	<form class>
+		<h3>Add a new user</h3>
+    <div class="well well-sm">
+		<div class="form-group {{errorClass 'email'}}">
+          <label class="control-label" for="email">Email</label>
+          <div class="controls">
+            <input name="email" id="loginEmail" type="email" >
+            <span class="help-block">{{errorMessage 'email'}}</span>
+          </div>
+        </div>
+        <div class="form-group {{errorClass 'password'}}">
+          <label class="control-label" for="password">Password</label>
+          <div class="controls">
+            <input name="password" id="loginPassword" type="password" >
+            <span class="help-block">{{errorMessage 'password'}}</span>
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+       </div> 
+	</form>
+</template>

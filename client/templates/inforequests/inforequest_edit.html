@@ -1,8 +1,7 @@
 <template name="inforequestEdit">
   <form class="main form page">
     <div class="form-group">
-      <h2>Name: {{name}}</h2>
-      <br>
+      <h4>Name: {{name}}</h4>
       <h4>Email: {{email}}</h4>
       <h4>Subject: {{subject}}</h4> 
       <h4>Message: {{message}}</h4>  
@@ -12,7 +11,7 @@
         <select name="status" id="status">
           <option value="Complete">Complete</option>
           <option value="Incomplete">Incomplete</option>
-          <option selected="selected" value="{{status}}">{{status}}</option>
+          
         </select>
       </div>
       <label class="control-label" for="comments">Comments</label>
@@ -20,6 +19,6 @@
         <input name="comments" id="comments" type="text" value="{{comments}}" placeholder="{{comments}}" class="form-control"/>
       </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <input type="submit" value="Submit" class="btn btn-primary" style="background-color: #28A4BD; border-color:#28A4BD"/>
 	</form>
 </template>

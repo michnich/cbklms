@@ -1,5 +1,5 @@
 Template.studentattendanceItem.helpers({
   submittedText: function() {
-    return this.submitted.toString();
+    return moment(this.attendancedate).format("MM-DD-YYYY");
   }
 });
